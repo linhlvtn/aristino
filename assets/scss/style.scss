@@ -1,0 +1,140 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a default font and color */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style heading elements */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* Style paragraphs */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Add some basic styles to links */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img{
+    max-width: 100%;
+}
+
+button:focus{
+    box-shadow: unset !important;
+    outline: unset;
+}
+
+.wrapper{
+    max-width: 1920px;
+    margin: auto;
+}
+
+.cover-banner{
+    img{
+        width: 100%;
+    }
+}
+
+.header{
+    min-height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 2rem 0;
+
+    &-main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--menu{
+            display: inline-flex;
+            align-items: center;
+            gap: 25px;
+
+            .btn-menu{
+                background: transparent;
+                border: none;
+                font-size: 26px;
+                color: #fff;
+
+                svg{
+                    width: 25px;
+                }
+            }
+        }
+
+        &--controler{
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            .btn{
+                border: none;
+                background: transparent;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.image-style-list{
+    .list-container {
+        overflow: hidden;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .list-style-group {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &--item {
+        flex: 0 0 33.33%; /* Hiển thị 3 mục trên màn hình desktop */
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px;
+    }
+
+   @media (max-width: 767px) {
+    &--item {
+        flex: 0 0 100%;
+    }
+   }
+}
+
+
+
+
+
+
+
+
+button {
+    display: block;
+    margin: 10px auto;
+}

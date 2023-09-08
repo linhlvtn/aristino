@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Title</title>
+    </head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="header-main">
+                    <div class="header-main--menu">
+                        <button type="button" class="btn-menu">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16H432c8.8 0 16 7.2 16 16z"/></svg>        
+                        </button>
+                        <div>
+                            <a href="">
+                                <img src="assets/images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-main--controler">
+                        <div>
+                            <button type="button" class="btn">
+                                <img src="assets/images/search.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn">
+                                <img src="assets/images/user.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn">
+                                <img src="assets/images/favorite.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn">
+                                <img src="assets/images/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="cover-banner">
+                <img src="assets/images/Banner.png" alt="">
+            </div>
+            <div class="image-style-list">
+                <div class="list-container">
+                    <div class="list-style-group">
+                        <div class="image-style-list--item">Item 1</div>
+                        <div class="image-style-list--item">Item 2</div>
+                        <div class="image-style-list--item">Item 3</div>
+                        <div class="image-style-list--item">Item 3</div>
+                        <div class="image-style-list--item">Item 3</div>
+                    </div>
+                </div>
+                <button class="prev-button">Previous</button>
+                <button class="next-button">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <script>   
+        document.addEventListener("DOMContentLoaded", function () {
+            const list = document.querySelector(".list-style-group");
+            const prevButton = document.querySelector(".prev-button");
+            const nextButton = document.querySelector(".next-button");
+
+            let currentIndex = 0;
+            const itemWidth = document.querySelector(".image-style-list--item").offsetWidth;
+
+            function updateButtons() {
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === list.children.length - 3;
+            }
+
+            nextButton.addEventListener("click", function () {
+                if (currentIndex < list.children.length - 3) {
+                    currentIndex++;
+                    list.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                    updateButtons();
+                }
+            });
+
+            prevButton.addEventListener("click", function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    list.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                    updateButtons();
+                }
+            });
+
+            window.addEventListener("resize", function () {
+                currentIndex = 0;
+                list.style.transform = `translateX(0)`;
+                updateButtons();
+            });
+
+            updateButtons();
+        });
+
+    </script>
+</body>
+</html>
