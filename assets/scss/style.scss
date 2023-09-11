@@ -54,6 +54,13 @@ a:hover {
     }
 }
 
+@media (max-width: 767px) {
+    .container-fluid{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 img{
     max-width: 100%;
 }
@@ -66,6 +73,7 @@ button:focus{
 .wrapper{
     max-width: 1920px;
     margin: auto;
+    overflow: hidden;
 }
 
 .cover-banner{
@@ -83,6 +91,7 @@ button:focus{
     right: 0;
     background: transparent;
     padding: 2rem 0;
+    z-index: 99;
 
     &-main{
         display: flex;
@@ -117,6 +126,117 @@ button:focus{
                 text-align: center;
             }
         }
+
+        @media (max-width: 767px) {
+            &--controler{
+                gap: 0;
+            }
+        }
+    }
+
+    &.scrolled{
+        padding: 1rem 0;
+        background: #231F20;
+    }
+
+    @media (max-width: 767px) {
+        padding: 1rem 0;
+    }
+}
+
+.menu-group{
+    background: #fff;
+    min-width: 430px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    padding: 30px;
+    padding-bottom: 75px;
+    transition: .3s;
+    left:-1000px;
+   
+    &.open{
+        left: 0;
+    }
+
+    &::after{
+        content: "";
+        background-image: url('/assets/images/bgr-menu.png');
+        min-width: 75%;
+        position: absolute;
+        right: 0;
+        height: 600px;
+        background-size: cover;
+        top: 20%;
+        opacity: 0.5;
+    }
+
+    .btn-close-menu{
+        border: none;
+        background: transparent;
+        padding: 0;
+
+        svg{
+            width: 20px;
+        }
+    }
+
+    .menu-group--list{
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        position: relative;
+
+        li{
+            margin-bottom: 30px;
+
+            a{
+                color: #000;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .menu-bottom{
+        position: absolute;
+        bottom: 0;
+        min-height: 60px;
+        width: 100%;
+        left: 0;
+        padding: 30px;
+        border-top: 1px solid #EAEAEA;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            display: inline-block;
+            color: #231F20;
+            text-decoration: underline;
+        }
+
+        &::before{
+            content: "";
+            background: #fff;
+            background-image: url('/assets/images/icon-line-menu.png');
+            width: 60px;
+            height: 20px;
+            position: absolute;
+            top: -9px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+        width: 100%;
+        min-width: unset;
     }
 }
 
@@ -306,46 +426,53 @@ button:focus{
                 top: 10px;
             }
         }
+    }
 
-        .view-more-prd{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+    
+
+    .view-more-prd{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        border: 1px solid #000;
+        color: #000;
+        padding: 8px;
+        min-width: 150px;
+        font-weight: 600;
+        position: relative;
+
+        &::after{
+            content: "";
+            border: 2px solid #BCBEC0;
+            padding: 21px;
+            position: absolute;
+            min-width: 158px;
+            min-height: 47px;
             border-radius: 40px;
-            border: 1px solid #000;
-            color: #000;
-            padding: 8px;
-            min-width: 150px;
-            font-weight: 600;
-            position: relative;
+            left: -5px;
+            right: 0;
+            top: -5px;
+            margin: auto;
+        }
 
-            &::after{
-                content: "";
-                border: 2px solid #BCBEC0;
-                padding: 21px;
-                position: absolute;
-                min-width: 158px;
-                min-height: 47px;
-                border-radius: 40px;
-                left: -5px;
-                right: 0;
-                top: -5px;
-                margin: auto;
-            }
+        &:hover{
+            background: #231F20;
+            color: #fff;
+        }
 
-            &:hover{
-                background: #231F20;
-                color: #fff;
-            }
+        &.view-prd-mobile{
+            display: none;
         }
     }
 
     &--list{
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
 
         &-item{
-            width: calc(100% / 4);
+            width: calc(100%/4 - 12px);
 
             .thumbnail-product{
                 position: relative;
@@ -360,11 +487,11 @@ button:focus{
                     left: 20px;
                     display: inline-block;
                     text-align: center;
-                    font-weight: 600;
+                    font-weight: 700;
                     padding: 3px 8px;
                     background: #fff;
                     border: 1px solid #000;
-                    font-size: 11px;
+                    font-size: 14px;
                     border-radius: 40px;
                 }
             }
@@ -418,10 +545,11 @@ button:focus{
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x;
+            flex-wrap: nowrap;
 
             &-item{
                 scroll-snap-align: start;
-                min-width: 280px;
+                min-width: 230px;
 
                 .info-product{
                     .title-product{
@@ -447,6 +575,16 @@ button:focus{
         }
         .view-more-prd{
             display: none;
+
+            &.view-prd-mobile{
+                display: block;
+                text-align: center;
+                margin: 20px;
+
+                &::after{
+                    min-width: 313px;
+                }
+            }
         }
     }
 }
@@ -455,7 +593,7 @@ button:focus{
     background: #231F20;
     position: relative;
     min-height: 400px;
-    padding: 40px 0;
+    padding: 80px 0 40px;
 
     .container-fluid{
         position: relative;
@@ -493,7 +631,6 @@ button:focus{
         text-transform: uppercase;
         color: #fff;
         font-weight: 300;
-        margin-top: 40px;
     }
 
     .form-contact{
@@ -519,6 +656,7 @@ button:focus{
             min-width: 135px;
             min-height: 40px;
             position: relative;
+            font-size: 14px;
 
             &::after{
                 content: "";
@@ -541,17 +679,36 @@ button:focus{
         }
     }
 
+    &-menu-group{
+        border-top: 1px solid #696969;
+        border-bottom: 1px solid #696969;
+        margin: 30px 0;
+        position: relative;
+
+        &::before{
+            content: "";
+            background: #272324;
+            background-image: url('/assets/images/icon-small-footer.svg');
+            width: 60px;
+            height: 20px;
+            position: absolute;
+            bottom: -9px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
     &-menu-list{
         display: flex;
         align-items: center;
-        padding: 30px 0;
-        padding-bottom: 40px;
-        margin: 30px 0;
         list-style: none;
         justify-content: space-evenly;
-        border-top: 1px solid #696969;
-        border-bottom: 1px solid #696969;
         position: relative;
+        padding: 30px 0;
+        padding-bottom: 40px;
 
         &--item{
             a{
@@ -571,18 +728,6 @@ button:focus{
                 }
             }
         }
-
-        &::before{
-            content: "";
-            background: #231F20;
-            background-image: url('/assets/images/icon-small-footer.svg');
-            width: 60px;
-            height: 20px;
-            position: absolute;
-            bottom: -9px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
     }
 
     &-coppy-right{
@@ -593,4 +738,99 @@ button:focus{
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+    @media (max-width: 767px) {
+        padding: 40px 0 10px;
+
+        .heading-footer{
+            font-size: 20px;
+        }
+
+        &-menu-list{
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x;
+            flex-wrap: nowrap;
+
+            &--item{
+                scroll-snap-align: start;
+                min-width: 100px;
+                text-align: center;
+            }
+        }
+    }
 }
+
+.form-with-icon{
+    position: relative;
+
+    .form-control{
+        padding-right: 45px;
+    }
+
+    .ic-form-control{
+        width: 20px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+}
+
+.cover-banner{
+    /* Thiết lập slider và các slide */
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.3s ease; /* Thời gian và kiểu chuyển động */
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Thiết lập dots */
+    .dots-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .dot {
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 40px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #fff; /* Màu của dot hiện tại */
+        width: 60px;
+    }
+
+    @media (max-width: 767px) {
+        img {
+            width: 100%;
+            min-height: 390px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            -o-object-position: left;
+            object-position: center;
+        }
+    }
+}
+
+

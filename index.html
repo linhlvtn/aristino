@@ -16,7 +16,7 @@
             <div class="container-fluid">
                 <div class="header-main">
                     <div class="header-main--menu">
-                        <button type="button" class="btn-menu">
+                        <button type="button" class="btn-menu toggleMenu">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16H432c8.8 0 16 7.2 16 16z"/></svg>        
                         </button>
                         <div>
@@ -47,12 +47,64 @@
                             </button>
                         </div>
                     </div>
+
+                    <div class="menu-group">
+                        <button type="button" class="btn-close-menu toggleMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>        
+                        </button>
+
+                        <ul class="menu-group--list">
+                            <li>
+                                <a href="">Menu 1</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 3</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 4</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 5</a>
+                            </li>
+                        </ul>
+
+                        <div class="menu-bottom">
+                            <a href="">Đơn hàng</a>
+                            <a href="">Tài khoản</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
         <main>
             <div class="cover-banner">
-                <img src="assets/images/Banner.png" alt="">
+                <!-- <img src="assets/images/Banner.png" alt=""> -->
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <a href="">
+                                <img src="assets/images/Banner.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="">
+                                <img src="assets/images/Banner.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="">
+                                <img src="assets/images/Banner.png" alt="">
+                            </a>
+                        </div>
+                        <!-- Thêm các slide khác tại đây -->
+                    </div>
+                    <div class="dots-container">
+                        <!-- Các dots sẽ được thêm tự động bằng JavaScript -->
+                    </div>
+                </div>
             </div>
             <div class="image-style-list">
                 <div class="list-container">
@@ -230,6 +282,8 @@
                             </div>
                          </div>
                     </div>
+
+                    <a href="" class="view-more-prd view-prd-mobile">Xem thêm</a>
                 </div>
             </div>
 
@@ -239,51 +293,56 @@
             <div class="container-fluid">
                 <h2 class="heading-footer">Đăng ký nhận bản tin</h2>
                 <div class="form-contact">
-                    <input type="text" class="form-control" placeholder="Email của bạn">
+                    <div class="form-with-icon">
+                        <input type="text" class="form-control" placeholder="Email của bạn">
+                        <svg class="ic-form-control" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96c-17.7 0-32 14.3-32 32v39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9V128c0-17.7-14.3-32-32-32H64zM32 207.6V384c0 17.7 14.3 32 32 32H448c17.7 0 32-14.3 32-32V207.6L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>        
+                    </div>
                     <button type="submit" class="btn btn-submit btn-custom-border">Đăng ký</button>
                 </div>
-                <ul class="footer-menu-list">
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Thương hiệu
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Sản phẩm
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Bộ sưu tập
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Thương hiệu
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Cửa hàng
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            3D Shopping
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Outlet
-                        </a>
-                    </li>
-                    <li class="footer-menu-list--item">
-                        <a href="">
-                            Thêm
-                        </a>
-                    </li>
-                </ul>
+                <div class="footer-menu-group">
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Sản phẩm
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Bộ sưu tập
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Cửa hàng
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                3D Shopping
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Outlet
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thêm
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="footer-coppy-right">
                     <div>© 2022 K&G Vietnam. All Rights Reserved</div>
                     <a href="" class="img-policy">
@@ -299,6 +358,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
     <script>   
+
+        $('.toggleMenu').click(function(){
+            $('.menu-group').toggleClass('open');
+        });
 
         function initializeSlider(listClass, prevButtonClass, nextButtonClass, itemsPerPage) {
             const list = document.querySelector(listClass);
@@ -345,6 +408,93 @@
         document.addEventListener("DOMContentLoaded", function () {
             let initialItemsPerPage = window.innerWidth > 768 ? 4 : 1;
             initializeSlider(".list-style-group-ctgr", ".prev-button-ctgr", ".next-button-ctgr", initialItemsPerPage);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.querySelector('.dots-container');
+
+            let currentIndex = 0;
+            let interval; // Biến để lưu trữ interval tự động chuyển slide
+
+            // Tạo các dots tương ứng với số lượng slide
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dotsContainer.appendChild(dot);
+
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            // Hiển thị slide đầu tiên
+            slides[currentIndex].classList.add('active');
+            dotsContainer.children[currentIndex].classList.add('active');
+
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dotsContainer.children[currentIndex].classList.remove('active');
+                currentIndex = index;
+                slides[currentIndex].classList.add('active');
+                dotsContainer.children[currentIndex].classList.add('active');
+                updateSliderPosition();
+            }
+
+            function updateSliderPosition() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            // Tự động chuyển slide sau một khoảng thời gian
+            function autoSlide() {
+                if (currentIndex < slides.length - 1) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(0); // Quay lại slide đầu tiên nếu đang ở slide cuối cùng
+                }
+            }
+
+            // Bắt đầu tự động chuyển slide
+            interval = setInterval(autoSlide, 5000); // 5000ms (5 giây) cho mỗi lần chuyển slide
+
+            // Xử lý khi người dùng hover chuột lên slider
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(interval); // Dừng tự động chuyển slide khi hover
+            });
+
+            // Xử lý khi người dùng rời chuột ra khỏi slider
+            slider.addEventListener('mouseleave', () => {
+                interval = setInterval(autoSlide, 3000); // Khởi động lại tự động chuyển slide sau khi rời chuột
+            });
+
+            // Xử lý nút Next và Prev
+            document.querySelector('.next').addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    goToSlide(currentIndex + 1);
+                }
+            });
+
+            document.querySelector('.prev').addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    goToSlide(currentIndex - 1);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // Lắng nghe sự kiện cuộn trang
+            $(window).scroll(function () {
+                // Kiểm tra vị trí cuộn (scroll position)
+                if ($(this).scrollTop() > 200) {
+                    // Nếu cuộn xuống dưới 200px, thêm class 'scrolled' vào header
+                    $('.header').addClass('scrolled');
+                } else {
+                    // Nếu cuộn lên trên 200px, loại bỏ class 'scrolled' khỏi header
+                    $('.header').removeClass('scrolled');
+                }
+            });
         });
 
     </script>
