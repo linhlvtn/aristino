@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 115,
+            "activePatchIndex": 125,
             "patches": [
                 {
                     "date": 1694396058858,
@@ -468,6 +468,46 @@
                 {
                     "date": 1694418692473,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -427,11 +427,9 @@\n             }\r\n         }\r\n     }\r\n \r\n-    .view-prd-mobile{\r\n-        display: none;\r\n-    }\r\n+    \r\n \r\n     .view-more-prd{\r\n         display: inline-flex;\r\n         align-items: center;\r\n@@ -461,8 +459,12 @@\n         &:hover{\r\n             background: #231F20;\r\n             color: #fff;\r\n         }\r\n+\r\n+        &.view-prd-mobile{\r\n+            display: none;\r\n+        }\r\n     }\r\n \r\n     &--list{\r\n         display: flex;\r\n"
+                },
+                {
+                    "date": 1694420111680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -334,8 +334,9 @@\n     }\r\n     \r\n     .item-category{\r\n         position: relative;\r\n+        max-height: 520px;\r\n \r\n         &--info{\r\n             position: absolute;\r\n             bottom: 0;\r\n"
+                },
+                {
+                    "date": 1694420123568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -335,8 +335,9 @@\n     \r\n     .item-category{\r\n         position: relative;\r\n         max-height: 520px;\r\n+        overflow: hidden;\r\n \r\n         &--info{\r\n             position: absolute;\r\n             bottom: 0;\r\n"
+                },
+                {
+                    "date": 1694420448086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,15 +163,15 @@\n \r\n     &::after{\r\n         content: \"\";\r\n         background-image: url('/assets/images/bgr-menu.png');\r\n-        min-width: 75%;\r\n+        min-width: 100%;\r\n         position: absolute;\r\n         right: 0;\r\n-        height: 600px;\r\n+        height: 800px;\r\n         background-size: cover;\r\n-        top: 20%;\r\n-        opacity: 0.5;\r\n+        top: 0%;\r\n+        opacity: 1;\r\n     }\r\n \r\n     .btn-close-menu{\r\n         border: none;\r\n"
+                },
+                {
+                    "date": 1694420480406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -170,8 +170,9 @@\n         height: 800px;\r\n         background-size: cover;\r\n         top: 0%;\r\n         opacity: 1;\r\n+        z-index: -1;\r\n     }\r\n \r\n     .btn-close-menu{\r\n         border: none;\r\n"
+                },
+                {
+                    "date": 1694420593271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,12 +167,14 @@\n         min-width: 100%;\r\n         position: absolute;\r\n         right: 0;\r\n         height: 800px;\r\n-        background-size: cover;\r\n+        background-size: contain;\r\n         top: 0%;\r\n         opacity: 1;\r\n         z-index: -1;\r\n+        background-repeat: no-repeat;\r\n+        background-position: right;\r\n     }\r\n \r\n     .btn-close-menu{\r\n         border: none;\r\n"
+                },
+                {
+                    "date": 1694420684822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -399,8 +399,12 @@\n     @media (max-width: 767px) {\r\n         .image-style-list--item{\r\n             flex: 0 0 100%;\r\n         }\r\n+\r\n+        .item-category{\r\n+            max-height: 480px;\r\n+        }\r\n     }\r\n \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694420780169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -279,8 +279,11 @@\n         text-align: center;\r\n         // padding: 20px;\r\n         img{\r\n             width: 100%;\r\n+            height: 100%;\r\n+            object-fit: cover;\r\n+            object-position: center;\r\n         }\r\n     }\r\n \r\n     .btn-control-slide{\r\n"
+                },
+                {
+                    "date": 1694420898404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -340,9 +340,9 @@\n     }\r\n     \r\n     .item-category{\r\n         position: relative;\r\n-        max-height: 520px;\r\n+        max-height: 480px;\r\n         overflow: hidden;\r\n \r\n         &--info{\r\n             position: absolute;\r\n"
+                },
+                {
+                    "date": 1694420920951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -281,9 +281,9 @@\n         img{\r\n             width: 100%;\r\n             height: 100%;\r\n             object-fit: cover;\r\n-            object-position: center;\r\n+            object-position: top;\r\n         }\r\n     }\r\n \r\n     .btn-control-slide{\r\n"
+                },
+                {
+                    "date": 1694421052768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -378,8 +378,14 @@\n             }\r\n         }\r\n     }\r\n \r\n+    @media (min-width: 1500px) {\r\n+        .item-category{\r\n+            max-height: 630px;\r\n+        }\r\n+    }\r\n+\r\n     @media (max-width: 991px) {\r\n         margin: 0;\r\n \r\n         .list-style-group-ctgr{\r\n"
                 }
             ],
             "date": 1694396058858,
