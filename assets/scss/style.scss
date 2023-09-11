@@ -90,7 +90,7 @@ button:focus{
     left: 0;
     right: 0;
     background: transparent;
-    padding: 2rem 0;
+    padding: 1rem 0;
     z-index: 99;
 
     &-main{
@@ -137,6 +137,18 @@ button:focus{
     &.scrolled{
         padding: 1rem 0;
         background: #231F20;
+    }
+
+    &.open-search{
+        background: #fff;
+
+        img{
+            filter: brightness(0%);
+        }
+
+        .header-main--menu .btn-menu{
+            color: #000;
+        }
     }
 
     @media (max-width: 767px) {
@@ -433,6 +445,7 @@ button:focus{
             margin-bottom: 0;
             position: relative;
             padding-left: 60px;
+            text-transform: uppercase;
 
             &::before{
                 content: "";
@@ -851,4 +864,95 @@ button:focus{
     }
 }
 
+.search-box{
+    width: 100%;
+    min-height: 300px;
+    background: #fff;
+    position: fixed;
+    top: 73px;
+    z-index: 99;
+    border-top: 1px solid #e1e1e1;
+    padding: 20px 30px;
 
+    &--header{
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e1e1e1;
+        margin-bottom: 20px;
+    }
+
+    .group-production {
+        margin: 0;
+    }
+
+    .search-tag-group{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &--item{
+            border: 1px solid #EAEAEA;
+            border-radius: 40px;
+            color: #231F20;
+            display: inline-flex;
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover{
+                background: whitesmoke;
+            }
+        }
+    }
+
+    .group-production--list-item{
+        width: calc(100%/6 - 13px);
+    }
+
+    .group-production--list-item .info-product--heading .title-product, 
+    .group-production--list-item .info-product--price .price-main{
+        font-size: 14px;
+    }
+
+    .group-production--heading .title-heading{
+        font-size: 18px;
+    }
+
+    .group-production--heading .title-heading:before{
+        min-height: 8px;
+        top: 7px;
+    }
+
+    .group-production--list{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .search-box .group-production--list-item{
+        scroll-snap-align: center;
+    }
+
+    @media (max-width: 767px) {
+        padding: 20px;
+
+        .group-production--list-item{
+            width: calc(100%/2 - 8px);
+        }
+        .group-production--list{
+            flex-wrap: wrap;
+            scroll-snap-type: none;
+        }
+        .group-production--list-item{
+            min-width: unset;
+        }
+
+        &--body{
+            max-height: calc(100vh - 100px);
+            overflow: auto;
+        }
+    }
+}
