@@ -279,6 +279,55 @@ button:focus{
     }
 }
 
+.btn-custom-hover{
+    position: relative;
+    overflow: hidden;
+
+    &--white{
+        &::before{
+            content: "";
+            background: url('/assets/images/hover-btn-white.png');
+            height: 45px;
+            width: 45px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -3px;
+            right: -18px;
+            background-size: contain;
+            transition: .3s;
+            right:-1000px;
+            // opacity: 0;
+            // visibility: hidden;
+        }
+    }
+
+    &--black{
+        &::before{
+            content: "";
+            background: url('/assets/images/hover-btn-black.png');
+            height: 45px;
+            width: 45px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -3px;
+            right: -18px;
+            background-size: contain;
+            transition: .3s;
+            right:-1000px;
+            // opacity: 0;
+            // visibility: hidden;
+        }
+    }
+
+    &:hover{
+        &::before{
+            // opacity: 1;
+            // visibility: visible;
+            right: -18px;
+        }
+    }
+}
+
 .image-style-list{
     position: relative;
 
