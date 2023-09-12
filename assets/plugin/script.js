@@ -2,6 +2,10 @@ $('.toggleMenu').click(function(){
     $('.menu-group').toggleClass('open');
 });
 
+$('.btn-card').click(function(){
+    $('.cart-box').toggleClass('open');
+});
+
 function initializeSlider(listClass, prevButtonClass, nextButtonClass, itemsPerPage) {
     const list = document.querySelector(listClass);
     const prevButton = document.querySelector(prevButtonClass);
@@ -136,7 +140,21 @@ $(document).ready(function () {
     });
 });
 
-
-$('#btn-search').click(function(){
-    $('.header').toggleClass('open-search');
-});
+$(document).ready(function () {
+    let isSearchIcon = true;
+    $('#btn-search').click(function(){
+        $('.header').toggleClass('open-search');
+        $('.search-box').toggleClass('open');
+    
+        const img = $(this).find('img');
+        if (isSearchIcon) {
+            img.attr('src', 'assets/images/close.png');
+        } else {
+            img.attr('src', 'assets/images/search.png');
+        }
+    
+        // Đảo ngược trạng thái của biến
+        isSearchIcon = !isSearchIcon;
+    
+    });
+})

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 125,
+            "activePatchIndex": 225,
             "patches": [
                 {
                     "date": 1694396058858,
@@ -508,6 +508,406 @@
                 {
                     "date": 1694421052768,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -378,8 +378,14 @@\n             }\r\n         }\r\n     }\r\n \r\n+    @media (min-width: 1500px) {\r\n+        .item-category{\r\n+            max-height: 630px;\r\n+        }\r\n+    }\r\n+\r\n     @media (max-width: 991px) {\r\n         margin: 0;\r\n \r\n         .list-style-group-ctgr{\r\n"
+                },
+                {
+                    "date": 1694483685941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n     top: 0;\r\n     left: 0;\r\n     right: 0;\r\n     background: transparent;\r\n-    padding: 2rem 0;\r\n+    padding: 1rem 0;\r\n     z-index: 99;\r\n \r\n     &-main{\r\n         display: flex;\r\n@@ -138,8 +138,20 @@\n         padding: 1rem 0;\r\n         background: #231F20;\r\n     }\r\n \r\n+    &.open-search{\r\n+        background: #fff;\r\n+\r\n+        img{\r\n+            filter: brightness(0%);\r\n+        }\r\n+\r\n+        .header-main--menu .btn-menu{\r\n+            color: #000;\r\n+        }\r\n+    }\r\n+\r\n     @media (max-width: 767px) {\r\n         padding: 1rem 0;\r\n     }\r\n }\r\n@@ -432,8 +444,9 @@\n             color: #231F20;\r\n             margin-bottom: 0;\r\n             position: relative;\r\n             padding-left: 60px;\r\n+            text-transform: uppercase;\r\n \r\n             &::before{\r\n                 content: \"\";\r\n                 background-image: url('/assets/images/title-heading.png');\r\n@@ -850,5 +863,102 @@\n         }\r\n     }\r\n }\r\n \r\n+.search-box{\r\n+    width: 100%;\r\n+    min-height: 300px;\r\n+    background: #fff;\r\n+    position: fixed;\r\n+    top: 73px;\r\n+    z-index: 99;\r\n+    border-top: 1px solid #e1e1e1;\r\n+    padding: 20px 30px;\r\n \r\n+    &--header{\r\n+        padding-bottom: 20px;\r\n+        border-bottom: 1px solid #e1e1e1;\r\n+        margin-bottom: 20px;\r\n+    }\r\n+\r\n+    .group-production {\r\n+        margin: 0;\r\n+    }\r\n+\r\n+    .search-tag-group{\r\n+        display: flex;\r\n+        align-items: center;\r\n+        flex-wrap: wrap;\r\n+        gap: 10px;\r\n+\r\n+        &--item{\r\n+            border: 1px solid #EAEAEA;\r\n+            border-radius: 40px;\r\n+            color: #231F20;\r\n+            display: inline-flex;\r\n+            padding: 5px 10px;\r\n+            font-size: 13px;\r\n+            font-weight: 500;\r\n+            cursor: pointer;\r\n+\r\n+            &:hover{\r\n+                background: whitesmoke;\r\n+            }\r\n+        }\r\n+    }\r\n+\r\n+    .group-production--list-item{\r\n+        width: calc(100%/6 - 13px);\r\n+    }\r\n+\r\n+    .group-production--list-item .info-product--heading .title-product, \r\n+    .group-production--list-item .info-product--price .price-main{\r\n+        font-size: 14px;\r\n+    }\r\n+\r\n+    .group-production--heading .title-heading{\r\n+        font-size: 18px;\r\n+    }\r\n+\r\n+    .group-production--heading .title-heading:before{\r\n+        min-height: 8px;\r\n+        top: 7px;\r\n+    }\r\n+\r\n+    .group-production--list{\r\n+        display: flex;\r\n+        flex-wrap: nowrap;\r\n+        overflow-x: auto;\r\n+        scroll-snap-type: x mandatory;\r\n+        -webkit-overflow-scrolling: touch;\r\n+    }\r\n+\r\n+    .search-box .group-production--list-item{\r\n+        scroll-snap-align: center;\r\n+    }\r\n+\r\n+    .form-search-prd{\r\n+        position: fixed;\r\n+        top: 0;\r\n+        width: calc(100% - 265px);\r\n+    }\r\n+\r\n+    @media (max-width: 767px) {\r\n+        padding: 20px;\r\n+\r\n+        .group-production--list-item{\r\n+            width: calc(100%/2 - 8px);\r\n+        }\r\n+        .group-production--list{\r\n+            flex-wrap: wrap;\r\n+            scroll-snap-type: none;\r\n+        }\r\n+        .group-production--list-item{\r\n+            min-width: unset;\r\n+        }\r\n+\r\n+        &--body{\r\n+            max-height: calc(100vh - 100px);\r\n+            overflow: auto;\r\n+        }\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694483704481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -939,8 +939,14 @@\n     .form-search-prd{\r\n         position: fixed;\r\n         top: 0;\r\n         width: calc(100% - 265px);\r\n+\r\n+        .btn-search-form{\r\n+            svg{\r\n+                width: 20px;\r\n+            }\r\n+        }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n"
+                },
+                {
+                    "date": 1694483714954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -945,8 +945,12 @@\n             svg{\r\n                 width: 20px;\r\n             }\r\n         }\r\n+\r\n+        .form-control{\r\n+            border: none;\r\n+        }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n"
+                },
+                {
+                    "date": 1694483881344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -939,8 +939,12 @@\n     .form-search-prd{\r\n         position: fixed;\r\n         top: 0;\r\n         width: calc(100% - 265px);\r\n+        min-height: 73px;\r\n+        background: #fff;\r\n+        display: flex;\r\n+        align-items: center;\r\n \r\n         .btn-search-form{\r\n             svg{\r\n                 width: 20px;\r\n"
+                },
+                {
+                    "date": 1694484014276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -952,8 +952,12 @@\n         }\r\n \r\n         .form-control{\r\n             border: none;\r\n+\r\n+            &:focus,&:focus-visible{\r\n+                outline: unset\r\n+            }\r\n         }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1694484043774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -952,11 +952,13 @@\n         }\r\n \r\n         .form-control{\r\n             border: none;\r\n+            font-size: 14px;\r\n \r\n             &:focus,&:focus-visible{\r\n-                outline: unset\r\n+                outline: unset;\r\n+                box-shadow: unset;\r\n             }\r\n         }\r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1694484094284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -872,8 +872,9 @@\n     top: 73px;\r\n     z-index: 99;\r\n     border-top: 1px solid #e1e1e1;\r\n     padding: 20px 30px;\r\n+    display: none;\r\n \r\n     &--header{\r\n         padding-bottom: 20px;\r\n         border-bottom: 1px solid #e1e1e1;\r\n"
+                },
+                {
+                    "date": 1694484149444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -874,8 +874,12 @@\n     border-top: 1px solid #e1e1e1;\r\n     padding: 20px 30px;\r\n     display: none;\r\n \r\n+    &.open{\r\n+        display: block;\r\n+    }\r\n+\r\n     &--header{\r\n         padding-bottom: 20px;\r\n         border-bottom: 1px solid #e1e1e1;\r\n         margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1694484997012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -969,8 +969,12 @@\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n \r\n+        .form-search-prd{\r\n+            width: calc(100% - 80px);\r\n+        }\r\n+\r\n         .group-production--list-item{\r\n             width: calc(100%/2 - 8px);\r\n         }\r\n         .group-production--list{\r\n"
+                },
+                {
+                    "date": 1694485278481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,8 +148,14 @@\n \r\n         .header-main--menu .btn-menu{\r\n             color: #000;\r\n         }\r\n+\r\n+        .header-main--controler{\r\n+            .btn-2, .btn-3, .btn-4{\r\n+                display: none;\r\n+            }\r\n+        }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 1rem 0;\r\n"
+                },
+                {
+                    "date": 1694485382513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -977,8 +977,13 @@\n         padding: 20px;\r\n \r\n         .form-search-prd{\r\n             width: calc(100% - 80px);\r\n+\r\n+            .form-control{\r\n+                border: 1px solid #d3d3d3;\r\n+                border-radius: 40px;\r\n+            }\r\n         }\r\n \r\n         .group-production--list-item{\r\n             width: calc(100%/2 - 8px);\r\n"
+                },
+                {
+                    "date": 1694485426434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -982,8 +982,13 @@\n             .form-control{\r\n                 border: 1px solid #d3d3d3;\r\n                 border-radius: 40px;\r\n             }\r\n+\r\n+            .btn-search-form{\r\n+                position: absolute;\r\n+                right: 13px;\r\n+            }\r\n         }\r\n \r\n         .group-production--list-item{\r\n             width: calc(100%/2 - 8px);\r\n"
+                },
+                {
+                    "date": 1694485437059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -986,8 +986,12 @@\n \r\n             .btn-search-form{\r\n                 position: absolute;\r\n                 right: 13px;\r\n+\r\n+                svg{\r\n+                    width: 18px;\r\n+                }\r\n             }\r\n         }\r\n \r\n         .group-production--list-item{\r\n"
+                },
+                {
+                    "date": 1694485461860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -981,8 +981,9 @@\n \r\n             .form-control{\r\n                 border: 1px solid #d3d3d3;\r\n                 border-radius: 40px;\r\n+                min-height: 40px;\r\n             }\r\n \r\n             .btn-search-form{\r\n                 position: absolute;\r\n"
+                },
+                {
+                    "date": 1694486120630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -464,9 +464,11 @@\n             }\r\n         }\r\n     }\r\n \r\n-    \r\n+    &--footer{\r\n+        border: none;\r\n+    }\r\n \r\n     .view-more-prd{\r\n         display: inline-flex;\r\n         align-items: center;\r\n"
+                },
+                {
+                    "date": 1694486144651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -600,8 +600,11 @@\n         }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n+        &--footer{\r\n+            border: block;\r\n+        }\r\n         .title-heading{\r\n             font-size: 16px;\r\n \r\n             &::before{\r\n"
+                },
+                {
+                    "date": 1694486328437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -601,9 +601,9 @@\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         &--footer{\r\n-            border: block;\r\n+            display: block;\r\n         }\r\n         .title-heading{\r\n             font-size: 16px;\r\n \r\n"
+                },
+                {
+                    "date": 1694487039280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1011,9 +1011,9 @@\n             min-width: unset;\r\n         }\r\n \r\n         &--body{\r\n-            max-height: calc(100vh - 100px);\r\n+            max-height: calc(100vh - 188px);\r\n             overflow: auto;\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694487198763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1014,6 +1014,25 @@\n         &--body{\r\n             max-height: calc(100vh - 188px);\r\n             overflow: auto;\r\n         }\r\n+\r\n+        .menu-bottom{\r\n+            position: absolute;\r\n+            bottom: 0;\r\n+            min-height: 60px;\r\n+            width: 100%;\r\n+            left: 0;\r\n+            padding: 30px;\r\n+            border-top: 1px solid #EAEAEA;\r\n+            display: flex;\r\n+            align-items: center;\r\n+            justify-content: space-between;\r\n+    \r\n+            a{\r\n+                display: inline-block;\r\n+                color: #231F20;\r\n+                text-decoration: underline;\r\n+            }\r\n+        }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694487259826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1021,9 +1021,9 @@\n             bottom: 0;\r\n             min-height: 60px;\r\n             width: 100%;\r\n             left: 0;\r\n-            padding: 30px;\r\n+            padding: 10px 20px;\r\n             border-top: 1px solid #EAEAEA;\r\n             display: flex;\r\n             align-items: center;\r\n             justify-content: space-between;\r\n"
+                },
+                {
+                    "date": 1694487269920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1026,8 +1026,9 @@\n             border-top: 1px solid #EAEAEA;\r\n             display: flex;\r\n             align-items: center;\r\n             justify-content: space-between;\r\n+            background: #fff;\r\n     \r\n             a{\r\n                 display: inline-block;\r\n                 color: #231F20;\r\n"
+                },
+                {
+                    "date": 1694488110343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -979,8 +979,9 @@\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n+        height: 100vh;\r\n \r\n         .form-search-prd{\r\n             width: calc(100% - 80px);\r\n \r\n"
+                },
+                {
+                    "date": 1694488198336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -979,9 +979,9 @@\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n-        height: 100vh;\r\n+        height: calc(100vh - 75px);\r\n \r\n         .form-search-prd{\r\n             width: calc(100% - 80px);\r\n \r\n@@ -1012,9 +1012,9 @@\n             min-width: unset;\r\n         }\r\n \r\n         &--body{\r\n-            max-height: calc(100vh - 188px);\r\n+            max-height: calc(100vh - 245px);\r\n             overflow: auto;\r\n         }\r\n \r\n         .menu-bottom{\r\n"
+                },
+                {
+                    "date": 1694488247368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -979,9 +979,9 @@\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n-        height: calc(100vh - 75px);\r\n+        height: calc(100vh - 73px);\r\n \r\n         .form-search-prd{\r\n             width: calc(100% - 80px);\r\n \r\n"
+                },
+                {
+                    "date": 1694488282647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1017,8 +1017,9 @@\n             overflow: auto;\r\n         }\r\n \r\n         .menu-bottom{\r\n+            display: block;\r\n             position: absolute;\r\n             bottom: 0;\r\n             min-height: 60px;\r\n             width: 100%;\r\n"
+                },
+                {
+                    "date": 1694488289862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -977,8 +977,12 @@\n             }\r\n         }\r\n     }\r\n \r\n+    .menu-bottom{\r\n+        display: block;\r\n+    }\r\n+\r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n         height: calc(100vh - 73px);\r\n \r\n"
+                },
+                {
+                    "date": 1694489029861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -978,9 +978,9 @@\n         }\r\n     }\r\n \r\n     .menu-bottom{\r\n-        display: block;\r\n+        display: none;\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n         padding: 20px;\r\n@@ -1041,5 +1041,9 @@\n                 text-decoration: underline;\r\n             }\r\n         }\r\n     }\r\n+}\r\n+\r\n+.cart-box{\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694489269230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1044,6 +1044,21 @@\n     }\r\n }\r\n \r\n .cart-box{\r\n+    background: #fff;\r\n+    min-width: 430px;\r\n+    height: 100%;\r\n+    top: 0;\r\n+    position: fixed;\r\n+    bottom: 0;\r\n+    z-index: 99;\r\n+    padding: 30px;\r\n+    padding-bottom: 75px;\r\n+    transition: .3s;\r\n+    left:-1000px;\r\n+   \r\n+    &.open{\r\n+        left: 0;\r\n+    }\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694489388554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1054,11 +1054,10 @@\n     z-index: 99;\r\n     padding: 30px;\r\n     padding-bottom: 75px;\r\n     transition: .3s;\r\n-    left:-1000px;\r\n+    right:-1000px;\r\n    \r\n     &.open{\r\n         left: 0;\r\n     }\r\n-    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694489707827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1057,7 +1057,11 @@\n     transition: .3s;\r\n     right:-1000px;\r\n    \r\n     &.open{\r\n-        left: 0;\r\n+        right: 0;\r\n     }\r\n+}\r\n+\r\n+.heading-title{\r\n+    margin: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694490181272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1063,5 +1063,6 @@\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694490202125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1063,6 +1063,22 @@\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n-    \r\n+    font-size: 1.8em;\r\n+    font-weight: 700;\r\n+    color: #231F20;\r\n+    margin-bottom: 0;\r\n+    position: relative;\r\n+    padding-left: 60px;\r\n+    text-transform: uppercase;\r\n+\r\n+    &::before{\r\n+        content: \"\";\r\n+        background-image: url('/assets/images/title-heading.png');\r\n+        min-width: 38px;\r\n+        min-height: 10px;\r\n+        position: absolute;\r\n+        left: 0;\r\n+        top: 10px;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694490217536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1063,9 +1063,9 @@\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n-    font-size: 1.8em;\r\n+    font-size: 1.4em;\r\n     font-weight: 700;\r\n     color: #231F20;\r\n     margin-bottom: 0;\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1694490228326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1063,9 +1063,9 @@\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n-    font-size: 1.4em;\r\n+    font-size: 1.2em;\r\n     font-weight: 700;\r\n     color: #231F20;\r\n     margin-bottom: 0;\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1694490235165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1075,9 +1075,9 @@\n     &::before{\r\n         content: \"\";\r\n         background-image: url('/assets/images/title-heading.png');\r\n         min-width: 38px;\r\n-        min-height: 10px;\r\n+        min-height: 8px;\r\n         position: absolute;\r\n         left: 0;\r\n         top: 10px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1694490266513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1078,7 +1078,7 @@\n         min-width: 38px;\r\n         min-height: 8px;\r\n         position: absolute;\r\n         left: 0;\r\n-        top: 10px;\r\n+        top: 6px;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694490500602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1059,8 +1059,14 @@\n    \r\n     &.open{\r\n         right: 0;\r\n     }\r\n+\r\n+    &--heading{\r\n+        display: flex;\r\n+        align-items: center;\r\n+        justify-content: space-between;\r\n+    }\r\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1694490521810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1064,8 +1064,14 @@\n     &--heading{\r\n         display: flex;\r\n         align-items: center;\r\n         justify-content: space-between;\r\n+\r\n+        .btn-close-cart{\r\n+            svg{\r\n+                width: 20px;\r\n+            }\r\n+        }\r\n     }\r\n }\r\n \r\n .heading-title{\r\n"
+                },
+                {
+                    "date": 1694490532618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1068,8 +1068,9 @@\n \r\n         .btn-close-cart{\r\n             svg{\r\n                 width: 20px;\r\n+                cursor: pointer;\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1694491548928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,19 +148,19 @@\n \r\n         .header-main--menu .btn-menu{\r\n             color: #000;\r\n         }\r\n+    }\r\n \r\n+    @media (max-width: 767px) {\r\n+        padding: 1rem 0;\r\n+\r\n         .header-main--controler{\r\n             .btn-2, .btn-3, .btn-4{\r\n                 display: none;\r\n             }\r\n         }\r\n     }\r\n-\r\n-    @media (max-width: 767px) {\r\n-        padding: 1rem 0;\r\n-    }\r\n }\r\n \r\n .menu-group{\r\n     background: #fff;\r\n"
+                },
+                {
+                    "date": 1694491703785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1064,8 +1064,9 @@\n     &--heading{\r\n         display: flex;\r\n         align-items: center;\r\n         justify-content: space-between;\r\n+        border-bottom: 1px solid #EAEAEA;\r\n \r\n         .btn-close-cart{\r\n             svg{\r\n                 width: 20px;\r\n"
+                },
+                {
+                    "date": 1694491757090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1065,9 +1065,12 @@\n         display: flex;\r\n         align-items: center;\r\n         justify-content: space-between;\r\n         border-bottom: 1px solid #EAEAEA;\r\n+        \r\n+    padding-bottom: 15px;\r\n \r\n+\r\n         .btn-close-cart{\r\n             svg{\r\n                 width: 20px;\r\n                 cursor: pointer;\r\n"
+                },
+                {
+                    "date": 1694491765845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1065,12 +1065,10 @@\n         display: flex;\r\n         align-items: center;\r\n         justify-content: space-between;\r\n         border-bottom: 1px solid #EAEAEA;\r\n-        \r\n-    padding-bottom: 15px;\r\n+        padding-bottom: 15px;\r\n \r\n-\r\n         .btn-close-cart{\r\n             svg{\r\n                 width: 20px;\r\n                 cursor: pointer;\r\n"
+                },
+                {
+                    "date": 1694493611040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1095,5 +1095,9 @@\n         position: absolute;\r\n         left: 0;\r\n         top: 6px;\r\n     }\r\n+}\r\n+\r\n+.list-prd-card{\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694493616412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1098,6 +1098,6 @@\n     }\r\n }\r\n \r\n .list-prd-card{\r\n-    \r\n+    list-style: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694501998727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1099,5 +1099,7 @@\n }\r\n \r\n .list-prd-card{\r\n     list-style: none;\r\n+    padding: 0;\r\n+    margin: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502013657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1101,5 +1101,10 @@\n .list-prd-card{\r\n     list-style: none;\r\n     padding: 0;\r\n     margin: 0;\r\n+\r\n+    &--item{\r\n+        display: flex;\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502121138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1104,7 +1104,10 @@\n     margin: 0;\r\n \r\n     &--item{\r\n         display: flex;\r\n-        \r\n+\r\n+        .thumbnail{\r\n+            width: 60px;\r\n+        }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502130909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1107,7 +1107,11 @@\n         display: flex;\r\n \r\n         .thumbnail{\r\n             width: 60px;\r\n+\r\n+            img{\r\n+                width: 100%;\r\n+            }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502757388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1112,6 +1112,13 @@\n             img{\r\n                 width: 100%;\r\n             }\r\n         }\r\n+\r\n+        .body-prd{\r\n+            .row-box{\r\n+                display: flex;\r\n+                justify-content: space-between;\r\n+            }\r\n+        }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502895608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1118,7 +1118,11 @@\n             .row-box{\r\n                 display: flex;\r\n                 justify-content: space-between;\r\n             }\r\n+\r\n+            .title-prd{\r\n+                \r\n+            }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502915357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1120,8 +1120,11 @@\n                 justify-content: space-between;\r\n             }\r\n \r\n             .title-prd{\r\n+\r\n+            }\r\n+            .price-prd{\r\n                 \r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1694502942608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1045,9 +1045,9 @@\n }\r\n \r\n .cart-box{\r\n     background: #fff;\r\n-    min-width: 430px;\r\n+    width: 430px;\r\n     height: 100%;\r\n     top: 0;\r\n     position: fixed;\r\n     bottom: 0;\r\n@@ -1123,9 +1123,9 @@\n             .title-prd{\r\n \r\n             }\r\n             .price-prd{\r\n-                \r\n+\r\n             }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694502998610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1120,12 +1120,14 @@\n                 justify-content: space-between;\r\n             }\r\n \r\n             .title-prd{\r\n-\r\n+                font-size: 14px;\r\n+                font-weight: 400;\r\n             }\r\n             .price-prd{\r\n-\r\n+                font-size: 14px;\r\n+                font-weight: 400;\r\n             }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694503069224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1127,7 +1127,13 @@\n             .price-prd{\r\n                 font-size: 14px;\r\n                 font-weight: 400;\r\n             }\r\n+\r\n+            .option-color{\r\n+                width: 12px;\r\n+                height: 12px;\r\n+                border-radius: 100%;\r\n+            }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694503181417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1129,11 +1129,15 @@\n                 font-weight: 400;\r\n             }\r\n \r\n             .option-color{\r\n-                width: 12px;\r\n-                height: 12px;\r\n-                border-radius: 100%;\r\n+\r\n+                .style-color{\r\n+                    width: 12px;\r\n+                    height: 12px;\r\n+                    border-radius: 100%;\r\n+                }\r\n+               \r\n             }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694503206617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1129,13 +1129,17 @@\n                 font-weight: 400;\r\n             }\r\n \r\n             .option-color{\r\n-\r\n+                display: inline-flex;\r\n+                align-items: center;\r\n+                gap: 10px;\r\n+                \r\n                 .style-color{\r\n                     width: 12px;\r\n                     height: 12px;\r\n                     border-radius: 100%;\r\n+                    display: inline-block;\r\n                 }\r\n                \r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1694503219951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1131,13 +1131,13 @@\n \r\n             .option-color{\r\n                 display: inline-flex;\r\n                 align-items: center;\r\n-                gap: 10px;\r\n-                \r\n+                gap: 8px;\r\n+\r\n                 .style-color{\r\n-                    width: 12px;\r\n-                    height: 12px;\r\n+                    width: 15px;\r\n+                    height: 15px;\r\n                     border-radius: 100%;\r\n                     display: inline-block;\r\n                 }\r\n                \r\n"
+                },
+                {
+                    "date": 1694503278954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1139,9 +1139,13 @@\n                     height: 15px;\r\n                     border-radius: 100%;\r\n                     display: inline-block;\r\n                 }\r\n-               \r\n             }\r\n+\r\n+            .option-size{\r\n+                display: flex;\r\n+                align-items: center;\r\n+            }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694503288909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1144,8 +1144,12 @@\n \r\n             .option-size{\r\n                 display: flex;\r\n                 align-items: center;\r\n+\r\n+                &--item{\r\n+                    \r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694503294220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1146,9 +1146,11 @@\n                 display: flex;\r\n                 align-items: center;\r\n \r\n                 &--item{\r\n-                    \r\n+                    .title{\r\n+                        \r\n+                    }\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1694503311538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1147,9 +1147,9 @@\n                 align-items: center;\r\n \r\n                 &--item{\r\n                     .title{\r\n-                        \r\n+                        color: #696969;\r\n                     }\r\n                 }\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1694503321167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1148,8 +1148,9 @@\n \r\n                 &--item{\r\n                     .title{\r\n                         color: #696969;\r\n+                        margin-right: 10px;\r\n                     }\r\n                 }\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1694503344886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1146,8 +1146,9 @@\n                 display: flex;\r\n                 align-items: center;\r\n \r\n                 &--item{\r\n+                    color: #000;\r\n                     .title{\r\n                         color: #696969;\r\n                         margin-right: 10px;\r\n                     }\r\n"
+                },
+                {
+                    "date": 1694503350156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1147,8 +1147,9 @@\n                 align-items: center;\r\n \r\n                 &--item{\r\n                     color: #000;\r\n+                    \r\n                     .title{\r\n                         color: #696969;\r\n                         margin-right: 10px;\r\n                     }\r\n"
+                },
+                {
+                    "date": 1694503422319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1147,12 +1147,12 @@\n                 align-items: center;\r\n \r\n                 &--item{\r\n                     color: #000;\r\n-                    \r\n+\r\n                     .title{\r\n                         color: #696969;\r\n-                        margin-right: 10px;\r\n+                        margin-right: 5px;\r\n                     }\r\n                 }\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1694503449077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1147,8 +1147,9 @@\n                 align-items: center;\r\n \r\n                 &--item{\r\n                     color: #000;\r\n+                    margin-right: 15px;\r\n \r\n                     .title{\r\n                         color: #696969;\r\n                         margin-right: 5px;\r\n"
+                },
+                {
+                    "date": 1694503475120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1104,8 +1104,9 @@\n     margin: 0;\r\n \r\n     &--item{\r\n         display: flex;\r\n+        gap: 10px;\r\n \r\n         .thumbnail{\r\n             width: 60px;\r\n \r\n"
+                },
+                {
+                    "date": 1694503514601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1105,8 +1105,10 @@\n \r\n     &--item{\r\n         display: flex;\r\n         gap: 10px;\r\n+        padding: 30px;\r\n+        border-bottom: 1px solid #EAEAEA;\r\n \r\n         .thumbnail{\r\n             width: 60px;\r\n \r\n"
+                },
+                {
+                    "date": 1694503529498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1105,9 +1105,9 @@\n \r\n     &--item{\r\n         display: flex;\r\n         gap: 10px;\r\n-        padding: 30px;\r\n+        padding: 20px 0;\r\n         border-bottom: 1px solid #EAEAEA;\r\n \r\n         .thumbnail{\r\n             width: 60px;\r\n"
+                },
+                {
+                    "date": 1694503580181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1109,9 +1109,9 @@\n         padding: 20px 0;\r\n         border-bottom: 1px solid #EAEAEA;\r\n \r\n         .thumbnail{\r\n-            width: 60px;\r\n+            width: 75px;\r\n \r\n             img{\r\n                 width: 100%;\r\n             }\r\n"
+                },
+                {
+                    "date": 1694503600912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1125,8 +1125,12 @@\n \r\n             .title-prd{\r\n                 font-size: 14px;\r\n                 font-weight: 400;\r\n+\r\n+                a{\r\n+                    color: #231F20;\r\n+                }\r\n             }\r\n             .price-prd{\r\n                 font-size: 14px;\r\n                 font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1694504143742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1125,8 +1125,9 @@\n \r\n             .title-prd{\r\n                 font-size: 14px;\r\n                 font-weight: 400;\r\n+                margin-bottom: 0;\r\n \r\n                 a{\r\n                     color: #231F20;\r\n                 }\r\n"
+                },
+                {
+                    "date": 1694504159281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1120,8 +1120,9 @@\n         .body-prd{\r\n             .row-box{\r\n                 display: flex;\r\n                 justify-content: space-between;\r\n+                margin: 5px 0;\r\n             }\r\n \r\n             .title-prd{\r\n                 font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1694504771242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1157,13 +1157,23 @@\n \r\n                 &--item{\r\n                     color: #000;\r\n                     margin-right: 15px;\r\n+                    display: inline-flex;\r\n+                    gap: 5px;\r\n \r\n                     .title{\r\n                         color: #696969;\r\n                         margin-right: 5px;\r\n                     }\r\n+\r\n+                    select.form-control{\r\n+                        font-size: 12px;\r\n+                        border-radius: 40px;\r\n+                        padding: 0px 15px 0 5px;\r\n+                        height: 27px;\r\n+                        width: 50px;\r\n+                    }\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1694504790742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1159,8 +1159,9 @@\n                     color: #000;\r\n                     margin-right: 15px;\r\n                     display: inline-flex;\r\n                     gap: 5px;\r\n+                    align-items: center;\r\n \r\n                     .title{\r\n                         color: #696969;\r\n                         margin-right: 5px;\r\n"
+                },
+                {
+                    "date": 1694505860853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1175,7 +1175,19 @@\n                         width: 50px;\r\n                     }\r\n                 }\r\n             }\r\n+\r\n+            .option-select{\r\n+                display: flex;\r\n+                gap: 5px;\r\n+                align-items: center;\r\n+\r\n+                &--item{\r\n+                    svg{\r\n+                        width: 15px;\r\n+                    }\r\n+                }\r\n+            }\r\n         }\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694505901433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1181,9 +1181,10 @@\n                 display: flex;\r\n                 gap: 5px;\r\n                 align-items: center;\r\n \r\n-                &--item{\r\n+                &--btn{\r\n+                    display: inline-block;\r\n                     svg{\r\n                         width: 15px;\r\n                     }\r\n                 }\r\n"
+                },
+                {
+                    "date": 1694505923758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1178,9 +1178,9 @@\n             }\r\n \r\n             .option-select{\r\n                 display: flex;\r\n-                gap: 5px;\r\n+                gap: 10px;\r\n                 align-items: center;\r\n \r\n                 &--btn{\r\n                     display: inline-block;\r\n"
+                },
+                {
+                    "date": 1694505931053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1183,8 +1183,10 @@\n                 align-items: center;\r\n \r\n                 &--btn{\r\n                     display: inline-block;\r\n+                    cursor: pointer;\r\n+                    \r\n                     svg{\r\n                         width: 15px;\r\n                     }\r\n                 }\r\n"
+                },
+                {
+                    "date": 1694506033690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1130,8 +1130,12 @@\n                 margin-bottom: 0;\r\n \r\n                 a{\r\n                     color: #231F20;\r\n+\r\n+                    &:hover{\r\n+                        color: #000;\r\n+                    }\r\n                 }\r\n             }\r\n             .price-prd{\r\n                 font-size: 14px;\r\n@@ -1184,9 +1188,9 @@\n \r\n                 &--btn{\r\n                     display: inline-block;\r\n                     cursor: pointer;\r\n-                    \r\n+\r\n                     svg{\r\n                         width: 15px;\r\n                     }\r\n                 }\r\n"
+                },
+                {
+                    "date": 1694506130220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1052,9 +1052,9 @@\n     position: fixed;\r\n     bottom: 0;\r\n     z-index: 99;\r\n     padding: 30px;\r\n-    padding-bottom: 75px;\r\n+    padding-bottom: 0;\r\n     transition: .3s;\r\n     right:-1000px;\r\n    \r\n     &.open{\r\n"
+                },
+                {
+                    "date": 1694506604059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1074,8 +1074,19 @@\n                 cursor: pointer;\r\n             }\r\n         }\r\n     }\r\n+\r\n+    &--footer{\r\n+        position: absolute;\r\n+        bottom: 0;\r\n+        width: 100%;\r\n+        background: #f00;\r\n+        left: 0;\r\n+        right: 0;\r\n+        padding: 15px 30px;\r\n+        height: 95px;\r\n+    }\r\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1694506614910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1075,8 +1075,12 @@\n             }\r\n         }\r\n     }\r\n \r\n+    &--body{\r\n+        \r\n+    }\r\n+\r\n     &--footer{\r\n         position: absolute;\r\n         bottom: 0;\r\n         width: 100%;\r\n"
+                },
+                {
+                    "date": 1694506858963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1076,9 +1076,9 @@\n         }\r\n     }\r\n \r\n     &--body{\r\n-        \r\n+\r\n     }\r\n \r\n     &--footer{\r\n         position: absolute;\r\n@@ -1088,8 +1088,12 @@\n         left: 0;\r\n         right: 0;\r\n         padding: 15px 30px;\r\n         height: 95px;\r\n+\r\n+        .total-price{\r\n+            display: flex;\r\n+        }\r\n     }\r\n }\r\n \r\n .heading-title{\r\n"
+                },
+                {
+                    "date": 1694506877350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1091,8 +1091,10 @@\n         height: 95px;\r\n \r\n         .total-price{\r\n             display: flex;\r\n+            align-items: center;\r\n+            justify-content: space-between;\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694506886469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1090,8 +1090,9 @@\n         padding: 15px 30px;\r\n         height: 95px;\r\n \r\n         .total-price{\r\n+            font-size: 15px;\r\n             display: flex;\r\n             align-items: center;\r\n             justify-content: space-between;\r\n         }\r\n"
+                },
+                {
+                    "date": 1694506901148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1090,9 +1090,9 @@\n         padding: 15px 30px;\r\n         height: 95px;\r\n \r\n         .total-price{\r\n-            font-size: 15px;\r\n+            font-size: 16px;\r\n             display: flex;\r\n             align-items: center;\r\n             justify-content: space-between;\r\n         }\r\n"
+                },
+                {
+                    "date": 1694508969011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1083,12 +1083,12 @@\n     &--footer{\r\n         position: absolute;\r\n         bottom: 0;\r\n         width: 100%;\r\n-        background: #f00;\r\n+        background: #fff;\r\n         left: 0;\r\n         right: 0;\r\n-        padding: 15px 30px;\r\n+        padding: 0 30px 0;\r\n         height: 95px;\r\n \r\n         .total-price{\r\n             font-size: 16px;\r\n@@ -1218,5 +1218,9 @@\n                 }\r\n             }\r\n         }\r\n     }\r\n+}\r\n+\r\n+.btn-custom-black{\r\n+    width: 100%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694509134244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1222,5 +1222,11 @@\n }\r\n \r\n .btn-custom-black{\r\n     width: 100%;\r\n+    border: none;\r\n+    margin-top: 15px;\r\n+    background: #231F20;\r\n+    color: #fff;\r\n+    border-radius: 40px;\r\n+    height: 48px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694509168164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1228,5 +1228,12 @@\n     background: #231F20;\r\n     color: #fff;\r\n     border-radius: 40px;\r\n     height: 48px;\r\n+    position: relative;\r\n+\r\n+    &::after{\r\n+        content: \"\";\r\n+        border: 1px solid #fff;\r\n+        width: 100%;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694509373554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1233,7 +1233,14 @@\n \r\n     &::after{\r\n         content: \"\";\r\n         border: 1px solid #fff;\r\n-        width: 100%;\r\n+        width: 99%;\r\n+        position: absolute;\r\n+        left: 0;\r\n+        right: 0;\r\n+        top: 2px;\r\n+        height: 44px;\r\n+        border-radius: 40px;\r\n+        margin: auto;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694509488884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1229,8 +1229,9 @@\n     color: #fff;\r\n     border-radius: 40px;\r\n     height: 48px;\r\n     position: relative;\r\n+    box-shadow: 0px 0px 0px 3px #BCBEC0;\r\n \r\n     &::after{\r\n         content: \"\";\r\n         border: 1px solid #fff;\r\n"
+                },
+                {
+                    "date": 1694509557180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1087,9 +1087,9 @@\n         background: #fff;\r\n         left: 0;\r\n         right: 0;\r\n         padding: 0 30px 0;\r\n-        height: 95px;\r\n+        height: 110px;\r\n \r\n         .total-price{\r\n             font-size: 16px;\r\n             display: flex;\r\n"
+                },
+                {
+                    "date": 1694509619912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1076,9 +1076,11 @@\n         }\r\n     }\r\n \r\n     &--body{\r\n-\r\n+        max-height: calc(100% - 185px);\r\n+        overflow: hidden;\r\n+        overflow-y: auto;\r\n     }\r\n \r\n     &--footer{\r\n         position: absolute;\r\n"
+                },
+                {
+                    "date": 1694509708919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,11 +153,13 @@\n \r\n     @media (max-width: 767px) {\r\n         padding: 1rem 0;\r\n \r\n-        .header-main--controler{\r\n-            .btn-2, .btn-3, .btn-4{\r\n-                display: none;\r\n+        &.open-search {\r\n+            .header-main--controler{\r\n+                .btn-2, .btn-3, .btn-4{\r\n+                    display: none;\r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1694509760502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1100,8 +1100,15 @@\n             align-items: center;\r\n             justify-content: space-between;\r\n         }\r\n     }\r\n+\r\n+    @media (max-width: 767px) {\r\n+        .cart-box{\r\n+            width: 100%;\r\n+            padding: 20px;\r\n+        }\r\n+    }\r\n }\r\n \r\n .heading-title{\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1694509782315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1105,9 +1105,8 @@\n     @media (max-width: 767px) {\r\n         .cart-box{\r\n             width: 100%;\r\n             padding: 20px;\r\n-        }\r\n     }\r\n }\r\n \r\n .heading-title{\r\n"
+                },
+                {
+                    "date": 1694509793983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1102,11 +1102,10 @@\n         }\r\n     }\r\n \r\n     @media (max-width: 767px) {\r\n-        .cart-box{\r\n-            width: 100%;\r\n-            padding: 20px;\r\n+        width: 100%;\r\n+        padding: 20px;\r\n     }\r\n }\r\n \r\n .heading-title{\r\n"
+                },
+                {
+                    "date": 1694509930485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1158,8 +1158,9 @@\n             .title-prd{\r\n                 font-size: 14px;\r\n                 font-weight: 400;\r\n                 margin-bottom: 0;\r\n+                margin-right: 10px;\r\n \r\n                 a{\r\n                     color: #231F20;\r\n \r\n"
                 }
             ],
             "date": 1694396058858,
