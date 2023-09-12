@@ -6,6 +6,15 @@ $('.btn-card').click(function(){
     $('.cart-box').toggleClass('open');
 });
 
+$('.btn-add-cart').click(function(){
+    $(this).closest('.group-production--list-item').find('.select-size-prd').toggleClass('show');
+});
+
+$(".group-production--list-item").on("mouseleave", function() {
+    $(this).find('.select-size-prd').removeClass("show");
+});
+
+
 function initializeSlider(listClass, prevButtonClass, nextButtonClass, itemsPerPage) {
     const list = document.querySelector(listClass);
     const prevButton = document.querySelector(prevButtonClass);
@@ -112,18 +121,18 @@ document.addEventListener('DOMContentLoaded', function () {
         interval = setInterval(autoSlide, 3000); // Khởi động lại tự động chuyển slide sau khi rời chuột
     });
 
-    // Xử lý nút Next và Prev
-    document.querySelector('.next').addEventListener('click', () => {
-        if (currentIndex < slides.length - 1) {
-            goToSlide(currentIndex + 1);
-        }
-    });
+    // // Xử lý nút Next và Prev
+    // document.querySelector('.next').addEventListener('click', () => {
+    //     if (currentIndex < slides.length - 1) {
+    //         goToSlide(currentIndex + 1);
+    //     }
+    // });
 
-    document.querySelector('.prev').addEventListener('click', () => {
-        if (currentIndex > 0) {
-            goToSlide(currentIndex - 1);
-        }
-    });
+    // document.querySelector('.prev').addEventListener('click', () => {
+    //     if (currentIndex > 0) {
+    //         goToSlide(currentIndex - 1);
+    //     }
+    // });
 });
 
 $(document).ready(function () {
@@ -158,3 +167,41 @@ $(document).ready(function () {
     
     });
 })
+
+
+// Get references to the modals, backdrop, and buttons
+const modals = document.querySelectorAll(".modal-custom");
+const modalBackdrops = document.querySelectorAll(".modal-backdrop");
+const showModalButtons = document.querySelectorAll(".show-modal-button");
+const closeModalButtons = document.querySelectorAll(".close");
+
+// Function to open the modal
+function openModal() {
+    // const modal = this.nextElementSibling; // Get the next element, which is the modal
+    // modal.style.display = "block";
+    $(modals).show();
+    modalBackdrop.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = this.closest(".modal-custom");
+    // modal.style.display = "none";
+    $(modal).hide();
+    modalBackdrop.style.display = "none";
+}
+
+// Event listeners to open the modals when the buttons are clicked
+showModalButtons.forEach(button => {
+    button.addEventListener("click", openModal);
+});
+
+// Event listeners to close the modals when the close buttons are clicked
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", closeModal);
+});
+
+// Event listeners to close the modals when the backdrop is clicked
+modalBackdrops.forEach(backdrop => {
+    backdrop.addEventListener("click", closeModal);
+});
