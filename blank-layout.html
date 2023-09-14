@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Title</title>
+    </head>
+<body>
+
+    <div class="wrapper">
+        <header class="header default">
+            <div class="container-fluid">
+                <div class="header-main">
+                    <div class="header-main--menu">
+                        <button type="button" class="btn-menu toggleMenu">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16H432c8.8 0 16 7.2 16 16z"/></svg>        
+                        </button>
+                        <div>
+                            <a href="">
+                                <img src="assets/images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-main--controler">
+                        <div>
+                            <button type="button" class="btn btn-1" id="btn-search">
+                                <img src="assets/images/search.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-2">
+                                <img src="assets/images/user.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-3">
+                                <img src="assets/images/favorite.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-4 btn-card">
+                                <img src="assets/images/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <button type="button" class="btn-close-menu toggleMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>        
+                        </button>
+
+                        <ul class="menu-group--list">
+                            <li>
+                                <a href="">Menu 1</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 3</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 4</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 5</a>
+                            </li>
+                        </ul>
+
+                        <div class="menu-bottom">
+                            <a href="">Đơn hàng</a>
+                            <a href="">Tài khoản</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="search-box">
+            <div class="form-search-prd">
+                <span class="btn-search-form">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M400 208A192 192 0 1 0 16 208a192 192 0 1 0 384 0zM349.3 360.6C312.2 395 262.6 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 54.6-21 104.2-55.4 141.3l149 149c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-149-149z"/></svg>        
+                </span>
+                <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm bạn mong muốn">
+            </div>
+            <div class="search-box--header">
+                <div class="search-tag-group">
+                    <span class="search-tag-group--item">
+                        Áo sơ mi
+                    </span>
+                    <span class="search-tag-group--item">
+                        Áo polo
+                    </span>
+                    <span class="search-tag-group--item">
+                        Bộ sưu tập 2023
+                    </span>
+                </div>
+            </div>
+            <div class="search-box--body">
+                <div class="group-production">
+                    <div class="">
+                        <div class="group-production--heading">
+                            <h3 class="title-heading">Gợi ý cho bạn</h3>
+                        </div>
+                        <div class="group-production--list">
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                    <div class="label-sale">Best Seller</div>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="group-production--footer">
+                            <div class="menu-bottom">
+                                <a href="">Đơn hàng</a>
+                                <a href="">Tài khoản</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-box">
+            <div class="cart-box--heading">
+                <h3 class="heading-title">
+                    Giỏ hàng của bạn
+                </h3>
+                <span class="btn-close-cart btn-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"></path></svg>
+                </span>
+            </div>
+            <div class="cart-box--body">
+                <ul class="list-prd-card">
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-box--footer">
+                <div class="total-price">
+                    <span>Tạm tính</span>
+                    <span><strong>5.999.999đ</strong></span>
+                </div>
+
+                <button type="button" class="btn-custom btn-custom-black btn-paynow btn-custom-hover btn-custom-hover--black btn-block">Thanh toán ngay</button>
+            </div>
+        </div>
+        <main>
+            content
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <h2 class="heading-footer">Đăng ký nhận bản tin</h2>
+                <div class="form-contact">
+                    <div class="form-with-icon">
+                        <input type="text" class="form-control" placeholder="Email của bạn">
+                        <svg class="ic-form-control" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96c-17.7 0-32 14.3-32 32v39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9V128c0-17.7-14.3-32-32-32H64zM32 207.6V384c0 17.7 14.3 32 32 32H448c17.7 0 32-14.3 32-32V207.6L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>        
+                    </div>
+                    <button type="submit" class="btn-custom btn-custom-black btn-paynow btn-custom-hover btn-custom-hover--black">Đăng ký</button>
+                </div>
+                <div class="footer-menu-group">
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Sản phẩm
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Bộ sưu tập
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Cửa hàng
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                3D Shopping
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Outlet
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thêm
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-coppy-right">
+                    <div>© 2022 K&G Vietnam. All Rights Reserved</div>
+                    <a href="" class="img-policy">
+                        <img width="120px" src="assets/images/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="assets/plugin/script.js"></script>
+</body>
+</html>
