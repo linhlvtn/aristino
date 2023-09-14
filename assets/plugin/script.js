@@ -14,6 +14,10 @@ $(".group-production--list-item").on("mouseleave", function() {
     $(this).find('.select-size-prd').removeClass("show");
 });
 
+$('.btn-action-filter').click(function(){
+    $('.filter-box').toggleClass('open');
+});
+
 
 function initializeSlider(listClass, prevButtonClass, nextButtonClass, itemsPerPage) {
     const list = document.querySelector(listClass);
