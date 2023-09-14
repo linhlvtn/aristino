@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Bắt đầu tự động chuyển slide
-    interval = setInterval(autoSlide, 5000); // 5000ms (5 giây) cho mỗi lần chuyển slide
+    interval = setInterval(autoSlide, 3000); // 3000ms (3 giây) cho mỗi lần chuyển slide
 
     // Xử lý khi người dùng hover chuột lên slider
     slider.addEventListener('mouseenter', () => {
@@ -208,4 +208,38 @@ closeModalButtons.forEach(button => {
 // Event listeners to close the modals when the backdrop is clicked
 modalBackdrops.forEach(backdrop => {
     backdrop.addEventListener("click", closeModal);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider-list");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+
+    let currentIndex = 0;
+    const itemWidth = document.querySelector(".item").offsetWidth;
+
+    function updateButtons() {
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= slider.children.length - 4; // Hiển thị 4 item mỗi lần
+    }
+
+    nextButton.addEventListener("click", function () {
+        if (currentIndex < slider.children.length - 4) {
+            currentIndex++;
+            slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            updateButtons();
+        }
+    });
+
+    prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            updateButtons();
+        }
+    });
+
+    updateButtons();
 });
