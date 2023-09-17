@@ -243,3 +243,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateButtons();
 });
+
+
+$(document).ready(function () {
+    $(".input-field").on("input", function () {
+        var $input = $(this);
+        var $label = $("label[for='" + $input.attr("id") + "']");
+
+        if ($input.val().trim() !== "") {
+            $label.addClass("active");
+        } else {
+            $label.removeClass("active");
+        }
+    });
+});
