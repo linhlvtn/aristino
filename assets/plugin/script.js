@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Bắt đầu tự động chuyển slide
-    interval = setInterval(autoSlide, 3000); // 3000ms (3 giây) cho mỗi lần chuyển slide
+    interval = setInterval(autoSlide, 4000); // 4000ms (4 giây) cho mỗi lần chuyển slide
 
     // Xử lý khi người dùng hover chuột lên slider
     slider.addEventListener('mouseenter', () => {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Xử lý khi người dùng rời chuột ra khỏi slider
     slider.addEventListener('mouseleave', () => {
-        interval = setInterval(autoSlide, 3000); // Khởi động lại tự động chuyển slide sau khi rời chuột
+        interval = setInterval(autoSlide, 4000); // Khởi động lại tự động chuyển slide sau khi rời chuột
     });
 
     // // Xử lý nút Next và Prev
