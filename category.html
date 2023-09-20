@@ -675,21 +675,27 @@
                         </div>
                         <div id="item-filter-body-6" class="collapse" aria-labelledby="item-filter-6" data-parent="#accordion">
                           <div class="card-body">
-                            <div class="range-slide">
-                                <div class="slide">
-                                    <div class="line" id="line" style="left: 0.99901%; right: 0%;"></div>
-                                    <span class="thumb" id="thumbMin" style="left: 0%;"></span>
-                                    <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+
+                            <div class="range-filter">
+                                <div class="slider-range">
+                                    <div class="progress"></div>
                                 </div>
-                                <input id="rangeMin" type="range" max="10000000" min="100000" step="100000" value="0">
-                                <input id="rangeMax" type="range" max="10000000" min="100000" step="100000" value="10000000">
+                                <div class="range-input">
+                                    <input type="range" class="range-min" min="100000" max="10000000" value="0" step="100000">
+                                    <input type="range" class="range-max" min="100000" max="10000000" value="10000000" step="100000">
+                                </div>
+
+                                <div class="price-input">
+                                    <div class="field">
+                                      <input type="text" class="price-input-value input-min" value="0đ">
+                                    </div>
+                                    <div class="field">
+                                      <input type="text" class="price-input-value input-max" value="10.000.000đ">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="display-number">
-                                <input type="hidden" class="slider-price" id="min" value="0">
-                                <input type="hidden" class="slider-price" id="max" value="10000000">
-                                <span id="minValue">0đ</span>
-                                <span id="maxValue">10.000.000&nbsp;VND</span>
-                            </div>
+                           
+
                           </div>
                         </div>
                       </div>
@@ -745,13 +751,27 @@
                         <div class="category-menu-option--advance">
                             <ul class="category-menu-option--advance-action">
                                 <li>
-                                    <button type="button" class="btn-action">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                            <path d="M3.16667 0.619047L3.04762 0.733333V7.9619V15.1857L1.79524 13.9381C0.671429 12.819 0.528571 12.6905 0.390476 12.6905C0.180952 12.6905 0 12.8714 0 13.081C0 13.2238 0.152381 13.3857 1.63333 14.8667C3.14762 16.3857 3.27619 16.5 3.42857 16.5C3.58095 16.5 3.70952 16.3857 5.22381 14.8667C6.70476 13.3857 6.85714 13.2238 6.85714 13.081C6.85714 12.8714 6.67619 12.6905 6.46667 12.6905C6.32857 12.6905 6.18571 12.819 5.0619 13.9381L3.80952 15.1857V7.9619V0.733333L3.69048 0.619047C3.61905 0.542856 3.51905 0.5 3.42857 0.5C3.3381 0.5 3.2381 0.542856 3.16667 0.619047Z" fill="#231F20"/>
-                                            <path d="M10.7762 2.13333C9.2952 3.61429 9.14282 3.77619 9.14282 3.91905C9.14282 4.12857 9.32377 4.30952 9.5333 4.30952C9.67139 4.30952 9.81425 4.18095 10.9381 3.0619L12.1904 1.81429V9.0381V16.2667L12.3095 16.381C12.4619 16.5381 12.6809 16.5381 12.8333 16.381L12.9523 16.2667V9.0381V1.81429L14.2047 3.0619C15.3285 4.18095 15.4714 4.30952 15.6095 4.30952C15.819 4.30952 16 4.12857 16 3.91905C16 3.77619 15.8476 3.61429 14.3666 2.13333C12.8523 0.614285 12.7238 0.5 12.5714 0.5C12.419 0.5 12.2904 0.614285 10.7762 2.13333Z" fill="#231F20"/>
-                                        </svg>
-                                        <span>Bán chạy nhất</span>
-                                    </button>
+                                    <div class="btn-group">
+                                        <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownButton">
+                                            Chọn một lựa chọn
+                                        </button> -->
+                                       <div class="btn-sort-group">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                <path d="M3.16667 0.619047L3.04762 0.733333V7.9619V15.1857L1.79524 13.9381C0.671429 12.819 0.528571 12.6905 0.390476 12.6905C0.180952 12.6905 0 12.8714 0 13.081C0 13.2238 0.152381 13.3857 1.63333 14.8667C3.14762 16.3857 3.27619 16.5 3.42857 16.5C3.58095 16.5 3.70952 16.3857 5.22381 14.8667C6.70476 13.3857 6.85714 13.2238 6.85714 13.081C6.85714 12.8714 6.67619 12.6905 6.46667 12.6905C6.32857 12.6905 6.18571 12.819 5.0619 13.9381L3.80952 15.1857V7.9619V0.733333L3.69048 0.619047C3.61905 0.542856 3.51905 0.5 3.42857 0.5C3.3381 0.5 3.2381 0.542856 3.16667 0.619047Z" fill="#231F20"/>
+                                                <path d="M10.7762 2.13333C9.2952 3.61429 9.14282 3.77619 9.14282 3.91905C9.14282 4.12857 9.32377 4.30952 9.5333 4.30952C9.67139 4.30952 9.81425 4.18095 10.9381 3.0619L12.1904 1.81429V9.0381V16.2667L12.3095 16.381C12.4619 16.5381 12.6809 16.5381 12.8333 16.381L12.9523 16.2667V9.0381V1.81429L14.2047 3.0619C15.3285 4.18095 15.4714 4.30952 15.6095 4.30952C15.819 4.30952 16 4.12857 16 3.91905C16 3.77619 15.8476 3.61429 14.3666 2.13333C12.8523 0.614285 12.7238 0.5 12.5714 0.5C12.419 0.5 12.2904 0.614285 10.7762 2.13333Z" fill="#231F20"/>
+                                            </svg>
+                                            <button type="button" class="btn-action dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownSort">
+                                                <span>Best Sale</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#" data-value="Best Sale">Best Sale</a>
+                                                <a class="dropdown-item" href="#" data-value="Sản phẩm mới">Sản phẩm mới</a>
+                                                <a class="dropdown-item" href="#" data-value="Giá giảm dần">Giá giảm dần</a>
+                                                <a class="dropdown-item" href="#" data-value="Giá tăng dần">Giá tăng dần</a>
+                                            </div>
+                                       </div>
+                                        
+                                    </div>
                                 </li>
                                 <li>
                                     <button type="button" class="btn-action btn-action-filter">
@@ -1906,5 +1926,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="assets/plugin/script.js"></script>
+
 </body>
 </html>
