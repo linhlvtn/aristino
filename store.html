@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Title</title>
+    </head>
+<body>
+
+    <div class="wrapper">
+        <header class="header default">
+            <div class="container-fluid">
+                <div class="header-main">
+                    <div class="header-main--menu">
+                        <button type="button" class="btn-menu toggleMenu">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 80c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16H432c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16H432c8.8 0 16 7.2 16 16z"/></svg>        
+                        </button>
+                        <div>
+                            <a href="">
+                                <img src="assets/images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-main--controler">
+                        <div>
+                            <button type="button" class="btn btn-1" id="btn-search">
+                                <img src="assets/images/search.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-2">
+                                <img src="assets/images/user.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-3">
+                                <img src="assets/images/favorite.png" alt="">
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-4 btn-card">
+                                <img src="assets/images/shop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <button type="button" class="btn-close-menu toggleMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>        
+                        </button>
+
+                        <ul class="menu-group--list">
+                            <li>
+                                <a href="">Menu 1</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 3</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 4</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 5</a>
+                            </li>
+                        </ul>
+
+                        <div class="menu-bottom">
+                            <a href="">Đơn hàng</a>
+                            <a href="">Tài khoản</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="search-box">
+            <div class="form-search-prd">
+                <span class="btn-search-form">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M400 208A192 192 0 1 0 16 208a192 192 0 1 0 384 0zM349.3 360.6C312.2 395 262.6 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 54.6-21 104.2-55.4 141.3l149 149c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-149-149z"/></svg>        
+                </span>
+                <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm bạn mong muốn">
+            </div>
+            <div class="search-box--header">
+                <div class="search-tag-group">
+                    <span class="search-tag-group--item">
+                        Áo sơ mi
+                    </span>
+                    <span class="search-tag-group--item">
+                        Áo polo
+                    </span>
+                    <span class="search-tag-group--item">
+                        Bộ sưu tập 2023
+                    </span>
+                </div>
+            </div>
+            <div class="search-box--body">
+                <div class="group-production">
+                    <div class="">
+                        <div class="group-production--heading">
+                            <h3 class="title-heading">Gợi ý cho bạn</h3>
+                        </div>
+                        <div class="group-production--list">
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                    <div class="label-sale">Best Seller</div>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+    
+                             <div class="group-production--list-item">
+                                <div class="thumbnail-product">
+                                    <a href="">
+                                        <img src="assets/images/Demo-product-2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="info-product">
+                                    <div class="info-product--heading">
+                                        <h3 class="title-product">
+                                            <a href="">Áo sơ mi nam dài tay ALS0110</a>
+                                        </h3>
+                                        <span class="favorite-prd">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="info-product--price">
+                                        <div class="price-main">1.999.999đ</div>
+                                        <div class="price-sale">2.499.999đ</div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="group-production--footer">
+                            <div class="menu-bottom">
+                                <a href="">Đơn hàng</a>
+                                <a href="">Tài khoản</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-box">
+            <div class="cart-box--heading">
+                <h3 class="heading-title">
+                    Giỏ hàng của bạn
+                </h3>
+                <span class="btn-close-cart btn-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"></path></svg>
+                </span>
+            </div>
+            <div class="cart-box--body">
+                <ul class="list-prd-card">
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-prd-card--item">
+                        <div class="thumbnail">
+                            <a href="">
+                                <img src="assets/images/Demo-product-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body-prd">
+                            <div class="row-box">
+                                <h3 class="title-prd"><a href="">Áo sơ mi nam dài tay Aristino ALS01103</a></h3>
+                                <span class="price-prd">1.999.999đ</span>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-color">
+                                    <span class="style-color" style="background: #696969"></span>
+                                    Ghi
+                                </div>
+                            </div>
+                            <div class="row-box">
+                                <div class="option-size">
+                                    <div class="option-size--item">
+                                        <span class="title">Size</span> XL
+                                    </div>
+                                    <div class="option-size--item">
+                                        <span class="title">Số lượng</span> 
+                                        <select name="" id="" class="form-control">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="option-select">
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M395 25.9c12.5-12.5 32.8-12.5 45.3 0l45.8 45.8c12.5 12.5 12.5 32.8 0 45.3l-66.9 66.9L328.1 92.8 395 25.9zm-78.2 78.2l91.1 91.1L164.7 438.4c-10.4 10.4-23.3 18-37.4 22.2L19.8 492.2 51.4 384.7c4.2-14.1 11.8-27 22.2-37.4L316.8 104.1zM451.5 14.6c-18.7-18.7-49.1-18.7-67.9 0L62.3 336C50 348.3 41 363.5 36.1 380.2L.3 501.7c-.8 2.8-.1 5.8 2 7.9s5.1 2.8 7.9 2l121.6-35.8c16.7-4.9 31.9-13.9 44.2-26.2L497.4 128.3c18.7-18.7 18.7-49.1 0-67.9L451.5 14.6z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M338.1 413.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256 349.4 109.9c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 45.9 98.6c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 34.6 402.1c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3 338.1 413.4z"/></svg>        
+                                    </span>
+                                    <span class="option-select--btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 130.6l-12-13.5-4.2-4.7c-26-29.2-65.3-42.8-103.8-35.8c-53.3 9.7-92 56.1-92 110.3v3.5c0 32.3 13.4 63.1 37.1 85.1L253 446.8c.8 .7 1.9 1.2 3 1.2s2.2-.4 3-1.2L443 275.5c23.6-22 37-52.8 37-85.1v-3.5c0-54.2-38.7-100.6-92-110.3c-38.5-7-77.8 6.6-103.8 35.8l-4.2 4.7-12 13.5c-3 3.4-7.4 5.4-12 5.4s-8.9-2-12-5.4zm34.9-57.1C311 48.4 352.7 37.7 393.7 45.1C462.2 57.6 512 117.3 512 186.9v3.5c0 36-13.1 70.6-36.6 97.5c-3.4 3.8-6.9 7.5-10.7 11l-184 171.3c-.8 .8-1.7 1.5-2.6 2.2c-6.3 4.9-14.1 7.5-22.1 7.5c-9.2 0-18-3.5-24.8-9.7L47.2 299c-3.8-3.5-7.3-7.2-10.7-11C13.1 261 0 226.4 0 190.4v-3.5C0 117.3 49.8 57.6 118.3 45.1c40.9-7.4 82.6 3.2 114.7 28.4c6.7 5.3 13 11.1 18.7 17.6l4.2 4.7 4.2-4.7c4.2-4.7 8.6-9.1 13.3-13.1c1.8-1.5 3.6-3 5.4-4.5z"/></svg>        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-box--footer">
+                <div class="total-price">
+                    <span>Tạm tính</span>
+                    <span><strong>5.999.999đ</strong></span>
+                </div>
+
+                <button type="button" class="btn-custom btn-custom-black btn-paynow btn-custom-hover btn-custom-hover--black btn-block">Thanh toán ngay</button>
+            </div>
+        </div>
+        <main>
+            <div class="breadcrumb-box container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="page-store">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="page-store--address">
+                                <h2 class="heading">Hệ thống cửa hàng</h2>
+                                <p>Nhập vị trí và chúng tôi sẽ hiển thị cho quý khách cửa hàng gần nhất.</p>
+                                <div class="select-address">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <select class="select2 select2-address">
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                                <option value="4">Option 4</option>
+                                                <option value="5">Option 5</option>
+                                                <option value="6">Option 6</option>
+                                                <option value="7">Option 7</option>
+                                                <option value="8">Option 8</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <select class="select2 select2-address">
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                                <option value="4">Option 4</option>
+                                                <option value="5">Option 5</option>
+                                                <option value="6">Option 6</option>
+                                                <option value="7">Option 7</option>
+                                                <option value="8">Option 8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-custom btn-custom-black btn-paynow btn-custom-hover mt-4 btn-custom-hover--black btn-block">Tìm kiếm</button>
+                                </div>
+                                <ul class="select-list-address">
+                                    <li class="select-list-address--item active">
+                                        <div class="info-adr">
+                                            <p class="address-name">
+                                                <strong>Aristino Time City</strong>
+                                            </p>
+                                            <p>
+                                                Địa chỉ: D7 -11-13 đường Thời đại, TTTM Times City, 458 Minh Khai, Hai Bà Trưng, HN
+                                            </p>
+                                            <p>
+                                                Điện thoại: 02439924999 
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                <path d="M6.44285 0.0761528C2.84998 0.681475 0.245143 3.70808 0.225616 7.30095C0.225616 7.91018 0.264669 8.26947 0.409165 8.8826C0.620051 9.78082 0.963717 10.6165 1.47922 11.4874C1.79164 12.0146 6.7006 19.4464 6.87243 19.6456C7.27077 20.1181 7.9581 20.1181 8.35644 19.6456C8.52828 19.4464 13.4333 12.0225 13.7497 11.4913C14.3862 10.4135 14.7885 9.31218 14.9564 8.17964C15.0228 7.75397 15.0111 6.8206 14.9369 6.32853C14.6947 4.70784 14.0035 3.32927 12.8553 2.1733C11.7306 1.03686 10.3638 0.333902 8.75869 0.0761528C8.13384 -0.0253849 7.04426 -0.0253849 6.44285 0.0761528ZM8.47751 0.95875C9.9459 1.16183 11.2503 1.82573 12.2696 2.88016C13.242 3.89163 13.8121 5.0515 14.0426 6.48084C14.1207 6.97681 14.1011 7.93752 13.9996 8.39443C13.8004 9.30437 13.4607 10.1635 12.9608 11.011C12.5078 11.7725 7.66911 19.0754 7.61444 19.0754C7.55976 19.0754 2.7211 11.7725 2.26809 11.011C1.76821 10.1635 1.42845 9.30437 1.22928 8.39443C1.12774 7.93752 1.10821 6.97681 1.18632 6.48084C1.5378 4.28216 2.81483 2.53259 4.79481 1.54454C5.86877 1.00561 7.25515 0.786917 8.47751 0.95875Z" fill="#231F20"/>
+                                                <path d="M6.83727 3.53235C6.30225 3.65342 5.86485 3.82915 5.50557 4.07128C4.43942 4.78986 3.82629 5.79352 3.71304 7.00807C3.51387 9.18722 5.02522 11.0305 7.21999 11.2844C8.61028 11.4484 10.063 10.7728 10.8675 9.58947C11.7033 8.3593 11.7579 6.67612 11.0003 5.39908C10.4848 4.5243 9.68423 3.90336 8.68838 3.60655C8.38377 3.51673 8.25099 3.50111 7.71206 3.48939C7.26686 3.47768 7.01692 3.4933 6.83727 3.53235ZM8.49312 4.50477C9.31714 4.77424 9.93417 5.30536 10.3091 6.0708C10.5629 6.59801 10.6371 6.94558 10.6137 7.53138C10.5981 7.88285 10.5707 8.05469 10.4887 8.29681C10.0591 9.56994 8.93051 10.3901 7.61443 10.3901C6.29834 10.3901 5.16971 9.56994 4.74013 8.29681C4.59954 7.87504 4.5683 7.21895 4.66202 6.76984C4.74794 6.37541 5.05646 5.74666 5.29859 5.46157C5.75551 4.93045 6.32958 4.58288 7.00911 4.42667C7.38401 4.34075 8.10649 4.3759 8.49312 4.50477Z" fill="#231F20"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li class="select-list-address--item">
+                                        <div class="info-adr">
+                                            <p class="address-name">
+                                                <strong>Aristino Time City</strong>
+                                            </p>
+                                            <p>
+                                                Địa chỉ: D7 -11-13 đường Thời đại, TTTM Times City, 458 Minh Khai, Hai Bà Trưng, HN
+                                            </p>
+                                            <p>
+                                                Điện thoại: 02439924999 
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                <path d="M6.44285 0.0761528C2.84998 0.681475 0.245143 3.70808 0.225616 7.30095C0.225616 7.91018 0.264669 8.26947 0.409165 8.8826C0.620051 9.78082 0.963717 10.6165 1.47922 11.4874C1.79164 12.0146 6.7006 19.4464 6.87243 19.6456C7.27077 20.1181 7.9581 20.1181 8.35644 19.6456C8.52828 19.4464 13.4333 12.0225 13.7497 11.4913C14.3862 10.4135 14.7885 9.31218 14.9564 8.17964C15.0228 7.75397 15.0111 6.8206 14.9369 6.32853C14.6947 4.70784 14.0035 3.32927 12.8553 2.1733C11.7306 1.03686 10.3638 0.333902 8.75869 0.0761528C8.13384 -0.0253849 7.04426 -0.0253849 6.44285 0.0761528ZM8.47751 0.95875C9.9459 1.16183 11.2503 1.82573 12.2696 2.88016C13.242 3.89163 13.8121 5.0515 14.0426 6.48084C14.1207 6.97681 14.1011 7.93752 13.9996 8.39443C13.8004 9.30437 13.4607 10.1635 12.9608 11.011C12.5078 11.7725 7.66911 19.0754 7.61444 19.0754C7.55976 19.0754 2.7211 11.7725 2.26809 11.011C1.76821 10.1635 1.42845 9.30437 1.22928 8.39443C1.12774 7.93752 1.10821 6.97681 1.18632 6.48084C1.5378 4.28216 2.81483 2.53259 4.79481 1.54454C5.86877 1.00561 7.25515 0.786917 8.47751 0.95875Z" fill="#231F20"/>
+                                                <path d="M6.83727 3.53235C6.30225 3.65342 5.86485 3.82915 5.50557 4.07128C4.43942 4.78986 3.82629 5.79352 3.71304 7.00807C3.51387 9.18722 5.02522 11.0305 7.21999 11.2844C8.61028 11.4484 10.063 10.7728 10.8675 9.58947C11.7033 8.3593 11.7579 6.67612 11.0003 5.39908C10.4848 4.5243 9.68423 3.90336 8.68838 3.60655C8.38377 3.51673 8.25099 3.50111 7.71206 3.48939C7.26686 3.47768 7.01692 3.4933 6.83727 3.53235ZM8.49312 4.50477C9.31714 4.77424 9.93417 5.30536 10.3091 6.0708C10.5629 6.59801 10.6371 6.94558 10.6137 7.53138C10.5981 7.88285 10.5707 8.05469 10.4887 8.29681C10.0591 9.56994 8.93051 10.3901 7.61443 10.3901C6.29834 10.3901 5.16971 9.56994 4.74013 8.29681C4.59954 7.87504 4.5683 7.21895 4.66202 6.76984C4.74794 6.37541 5.05646 5.74666 5.29859 5.46157C5.75551 4.93045 6.32958 4.58288 7.00911 4.42667C7.38401 4.34075 8.10649 4.3759 8.49312 4.50477Z" fill="#231F20"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li class="select-list-address--item">
+                                        <div class="info-adr">
+                                            <p class="address-name">
+                                                <strong>Aristino Time City</strong>
+                                            </p>
+                                            <p>
+                                                Địa chỉ: D7 -11-13 đường Thời đại, TTTM Times City, 458 Minh Khai, Hai Bà Trưng, HN
+                                            </p>
+                                            <p>
+                                                Điện thoại: 02439924999 
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                <path d="M6.44285 0.0761528C2.84998 0.681475 0.245143 3.70808 0.225616 7.30095C0.225616 7.91018 0.264669 8.26947 0.409165 8.8826C0.620051 9.78082 0.963717 10.6165 1.47922 11.4874C1.79164 12.0146 6.7006 19.4464 6.87243 19.6456C7.27077 20.1181 7.9581 20.1181 8.35644 19.6456C8.52828 19.4464 13.4333 12.0225 13.7497 11.4913C14.3862 10.4135 14.7885 9.31218 14.9564 8.17964C15.0228 7.75397 15.0111 6.8206 14.9369 6.32853C14.6947 4.70784 14.0035 3.32927 12.8553 2.1733C11.7306 1.03686 10.3638 0.333902 8.75869 0.0761528C8.13384 -0.0253849 7.04426 -0.0253849 6.44285 0.0761528ZM8.47751 0.95875C9.9459 1.16183 11.2503 1.82573 12.2696 2.88016C13.242 3.89163 13.8121 5.0515 14.0426 6.48084C14.1207 6.97681 14.1011 7.93752 13.9996 8.39443C13.8004 9.30437 13.4607 10.1635 12.9608 11.011C12.5078 11.7725 7.66911 19.0754 7.61444 19.0754C7.55976 19.0754 2.7211 11.7725 2.26809 11.011C1.76821 10.1635 1.42845 9.30437 1.22928 8.39443C1.12774 7.93752 1.10821 6.97681 1.18632 6.48084C1.5378 4.28216 2.81483 2.53259 4.79481 1.54454C5.86877 1.00561 7.25515 0.786917 8.47751 0.95875Z" fill="#231F20"/>
+                                                <path d="M6.83727 3.53235C6.30225 3.65342 5.86485 3.82915 5.50557 4.07128C4.43942 4.78986 3.82629 5.79352 3.71304 7.00807C3.51387 9.18722 5.02522 11.0305 7.21999 11.2844C8.61028 11.4484 10.063 10.7728 10.8675 9.58947C11.7033 8.3593 11.7579 6.67612 11.0003 5.39908C10.4848 4.5243 9.68423 3.90336 8.68838 3.60655C8.38377 3.51673 8.25099 3.50111 7.71206 3.48939C7.26686 3.47768 7.01692 3.4933 6.83727 3.53235ZM8.49312 4.50477C9.31714 4.77424 9.93417 5.30536 10.3091 6.0708C10.5629 6.59801 10.6371 6.94558 10.6137 7.53138C10.5981 7.88285 10.5707 8.05469 10.4887 8.29681C10.0591 9.56994 8.93051 10.3901 7.61443 10.3901C6.29834 10.3901 5.16971 9.56994 4.74013 8.29681C4.59954 7.87504 4.5683 7.21895 4.66202 6.76984C4.74794 6.37541 5.05646 5.74666 5.29859 5.46157C5.75551 4.93045 6.32958 4.58288 7.00911 4.42667C7.38401 4.34075 8.10649 4.3759 8.49312 4.50477Z" fill="#231F20"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li class="select-list-address--item">
+                                        <div class="info-adr">
+                                            <p class="address-name">
+                                                <strong>Aristino Time City</strong>
+                                            </p>
+                                            <p>
+                                                Địa chỉ: D7 -11-13 đường Thời đại, TTTM Times City, 458 Minh Khai, Hai Bà Trưng, HN
+                                            </p>
+                                            <p>
+                                                Điện thoại: 02439924999 
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                <path d="M6.44285 0.0761528C2.84998 0.681475 0.245143 3.70808 0.225616 7.30095C0.225616 7.91018 0.264669 8.26947 0.409165 8.8826C0.620051 9.78082 0.963717 10.6165 1.47922 11.4874C1.79164 12.0146 6.7006 19.4464 6.87243 19.6456C7.27077 20.1181 7.9581 20.1181 8.35644 19.6456C8.52828 19.4464 13.4333 12.0225 13.7497 11.4913C14.3862 10.4135 14.7885 9.31218 14.9564 8.17964C15.0228 7.75397 15.0111 6.8206 14.9369 6.32853C14.6947 4.70784 14.0035 3.32927 12.8553 2.1733C11.7306 1.03686 10.3638 0.333902 8.75869 0.0761528C8.13384 -0.0253849 7.04426 -0.0253849 6.44285 0.0761528ZM8.47751 0.95875C9.9459 1.16183 11.2503 1.82573 12.2696 2.88016C13.242 3.89163 13.8121 5.0515 14.0426 6.48084C14.1207 6.97681 14.1011 7.93752 13.9996 8.39443C13.8004 9.30437 13.4607 10.1635 12.9608 11.011C12.5078 11.7725 7.66911 19.0754 7.61444 19.0754C7.55976 19.0754 2.7211 11.7725 2.26809 11.011C1.76821 10.1635 1.42845 9.30437 1.22928 8.39443C1.12774 7.93752 1.10821 6.97681 1.18632 6.48084C1.5378 4.28216 2.81483 2.53259 4.79481 1.54454C5.86877 1.00561 7.25515 0.786917 8.47751 0.95875Z" fill="#231F20"/>
+                                                <path d="M6.83727 3.53235C6.30225 3.65342 5.86485 3.82915 5.50557 4.07128C4.43942 4.78986 3.82629 5.79352 3.71304 7.00807C3.51387 9.18722 5.02522 11.0305 7.21999 11.2844C8.61028 11.4484 10.063 10.7728 10.8675 9.58947C11.7033 8.3593 11.7579 6.67612 11.0003 5.39908C10.4848 4.5243 9.68423 3.90336 8.68838 3.60655C8.38377 3.51673 8.25099 3.50111 7.71206 3.48939C7.26686 3.47768 7.01692 3.4933 6.83727 3.53235ZM8.49312 4.50477C9.31714 4.77424 9.93417 5.30536 10.3091 6.0708C10.5629 6.59801 10.6371 6.94558 10.6137 7.53138C10.5981 7.88285 10.5707 8.05469 10.4887 8.29681C10.0591 9.56994 8.93051 10.3901 7.61443 10.3901C6.29834 10.3901 5.16971 9.56994 4.74013 8.29681C4.59954 7.87504 4.5683 7.21895 4.66202 6.76984C4.74794 6.37541 5.05646 5.74666 5.29859 5.46157C5.75551 4.93045 6.32958 4.58288 7.00911 4.42667C7.38401 4.34075 8.10649 4.3759 8.49312 4.50477Z" fill="#231F20"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li class="select-list-address--item">
+                                        <div class="info-adr">
+                                            <p class="address-name">
+                                                <strong>Aristino Time City</strong>
+                                            </p>
+                                            <p>
+                                                Địa chỉ: D7 -11-13 đường Thời đại, TTTM Times City, 458 Minh Khai, Hai Bà Trưng, HN
+                                            </p>
+                                            <p>
+                                                Điện thoại: 02439924999 
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                <path d="M6.44285 0.0761528C2.84998 0.681475 0.245143 3.70808 0.225616 7.30095C0.225616 7.91018 0.264669 8.26947 0.409165 8.8826C0.620051 9.78082 0.963717 10.6165 1.47922 11.4874C1.79164 12.0146 6.7006 19.4464 6.87243 19.6456C7.27077 20.1181 7.9581 20.1181 8.35644 19.6456C8.52828 19.4464 13.4333 12.0225 13.7497 11.4913C14.3862 10.4135 14.7885 9.31218 14.9564 8.17964C15.0228 7.75397 15.0111 6.8206 14.9369 6.32853C14.6947 4.70784 14.0035 3.32927 12.8553 2.1733C11.7306 1.03686 10.3638 0.333902 8.75869 0.0761528C8.13384 -0.0253849 7.04426 -0.0253849 6.44285 0.0761528ZM8.47751 0.95875C9.9459 1.16183 11.2503 1.82573 12.2696 2.88016C13.242 3.89163 13.8121 5.0515 14.0426 6.48084C14.1207 6.97681 14.1011 7.93752 13.9996 8.39443C13.8004 9.30437 13.4607 10.1635 12.9608 11.011C12.5078 11.7725 7.66911 19.0754 7.61444 19.0754C7.55976 19.0754 2.7211 11.7725 2.26809 11.011C1.76821 10.1635 1.42845 9.30437 1.22928 8.39443C1.12774 7.93752 1.10821 6.97681 1.18632 6.48084C1.5378 4.28216 2.81483 2.53259 4.79481 1.54454C5.86877 1.00561 7.25515 0.786917 8.47751 0.95875Z" fill="#231F20"/>
+                                                <path d="M6.83727 3.53235C6.30225 3.65342 5.86485 3.82915 5.50557 4.07128C4.43942 4.78986 3.82629 5.79352 3.71304 7.00807C3.51387 9.18722 5.02522 11.0305 7.21999 11.2844C8.61028 11.4484 10.063 10.7728 10.8675 9.58947C11.7033 8.3593 11.7579 6.67612 11.0003 5.39908C10.4848 4.5243 9.68423 3.90336 8.68838 3.60655C8.38377 3.51673 8.25099 3.50111 7.71206 3.48939C7.26686 3.47768 7.01692 3.4933 6.83727 3.53235ZM8.49312 4.50477C9.31714 4.77424 9.93417 5.30536 10.3091 6.0708C10.5629 6.59801 10.6371 6.94558 10.6137 7.53138C10.5981 7.88285 10.5707 8.05469 10.4887 8.29681C10.0591 9.56994 8.93051 10.3901 7.61443 10.3901C6.29834 10.3901 5.16971 9.56994 4.74013 8.29681C4.59954 7.87504 4.5683 7.21895 4.66202 6.76984C4.74794 6.37541 5.05646 5.74666 5.29859 5.46157C5.75551 4.93045 6.32958 4.58288 7.00911 4.42667C7.38401 4.34075 8.10649 4.3759 8.49312 4.50477Z" fill="#231F20"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="page-store--map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9249186760817!2d105.76025181179978!3d21.03568998745777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454bee72ca783%3A0xafaec3d4b8ac19d1!2zNDAgUC4gSMOgbSBOZ2hpLCBD4bqndSBEaeG7hW4sIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1695291045809!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <h2 class="heading-footer">Đăng ký nhận bản tin</h2>
+                <div class="form-contact">
+                    <div class="form-with-icon">
+                        <input type="text" class="form-control" placeholder="Email của bạn">
+                        <svg class="ic-form-control" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96c-17.7 0-32 14.3-32 32v39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9V128c0-17.7-14.3-32-32-32H64zM32 207.6V384c0 17.7 14.3 32 32 32H448c17.7 0 32-14.3 32-32V207.6L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>        
+                    </div>
+                    <button type="submit" class="btn-custom btn-custom-black btn-paynow btn-custom-hover btn-custom-hover--black">Đăng ký</button>
+                </div>
+                <div class="footer-menu-group">
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Sản phẩm
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Bộ sưu tập
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thương hiệu
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Cửa hàng
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                3D Shopping
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Outlet
+                            </a>
+                        </li>
+                        <li class="footer-menu-list--item">
+                            <a href="">
+                                Thêm
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-coppy-right">
+                    <div>© 2022 K&G Vietnam. All Rights Reserved</div>
+                    <a href="" class="img-policy">
+                        <img width="120px" src="assets/images/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="assets/plugin/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".select2").select2();
+        });
+
+    </script>
+</body>
+</html>
