@@ -6,6 +6,10 @@ $('.btn-card').click(function(){
     $('.cart-box').toggleClass('open');
 });
 
+$('.btn-login').click(function(){
+    $('.login-sibar').toggleClass('open');
+});
+
 $('.btn-add-cart').click(function(){
     $(this).closest('.group-production--list-item').find('.select-size-prd').toggleClass('show');
 });
@@ -18,6 +22,9 @@ $('.btn-action-filter').click(function(){
     $('.filter-box').toggleClass('open');
 });
 
+$(document).ready(function () {
+    $(".select2").select2();
+});
 
 // function initializeSlider(listClass, prevButtonClass, nextButtonClass, itemsPerPage) {
 //     const list = document.querySelector(listClass);
@@ -461,3 +468,28 @@ $(".dropdown-item").click(function () {
     const selectedValue = $(this).data("value");
     $("#dropdownSort").text(selectedValue);
 });
+
+
+
+// Kiểm tra kích thước màn hình
+function checkWindowSize() {
+    if (window.innerWidth >= 768) {
+      // Nếu màn hình lớn hơn hoặc bằng 768px, sử dụng trạng thái hover
+      $('.btn-sort-group').hover(function() {
+        $(this).addClass('show');
+        $(this).find('.dropdown-menu').addClass('show');
+      }, function() {
+        $(this).removeClass('show');
+        $(this).find('.dropdown-menu').removeClass('show');
+      });
+    } else {
+      // Nếu màn hình nhỏ hơn 768px, sử dụng trạng thái click
+      $('.btn-sort-group').off('mouseenter mouseleave');
+    }
+  }
+  
+  // Gọi hàm kiểm tra kích thước màn hình khi tải trang và khi thay đổi kích thước màn hình
+  $(document).ready(function() {
+    checkWindowSize();
+    $(window).resize(checkWindowSize);
+  });

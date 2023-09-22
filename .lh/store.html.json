@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 55,
+            "activePatchIndex": 56,
             "patches": [
                 {
                     "date": 1695287120282,
@@ -228,6 +228,10 @@
                 {
                     "date": 1695291417807,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -460,9 +460,9 @@\n                                     </div>\r\n                                     <button type=\"button\" class=\"btn-custom btn-custom-black btn-paynow btn-custom-hover mt-4 btn-custom-hover--black btn-block\">Tìm kiếm</button>\r\n                                 </div>\r\n                                 <ul class=\"select-list-address\">\r\n-                                    <li class=\"select-list-address--item\">\r\n+                                    <li class=\"select-list-address--item active\">\r\n                                         <div class=\"info-adr\">\r\n                                             <p class=\"address-name\">\r\n                                                 <strong>Aristino Time City</strong>\r\n                                             </p>\r\n"
+                },
+                {
+                    "date": 1695358638033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -639,11 +639,9 @@\n     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js\"></script>\r\n     <script src=\"assets/plugin/script.js\"></script>\r\n \r\n     <script>\r\n-        $(document).ready(function () {\r\n-            $(\".select2\").select2();\r\n-        });\r\n+       \r\n \r\n     </script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1695287120282,
