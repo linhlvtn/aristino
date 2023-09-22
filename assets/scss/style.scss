@@ -1437,11 +1437,12 @@ button {
         }
     }
 
-    .SibarNavBar_filter__body.body-sibar-login .form-control,
-    .SibarNavBar_filter__body.body-sibar-login button {
+    .SibarNavBar_filter__body.body-sibar-login .form-control{
         border-radius: 3px;
         width: 100%;
-        height: 55px
+        height: 45px;
+        border-radius: 40px;
+        padding: 10px 20px;
     }
 
     .SibarNavBar_filter__body.body-sibar-login .btn_group_login {
@@ -4492,6 +4493,41 @@ button {
     }
 }
 
+.slick-list-prd{
+    position: relative;
+    margin-bottom: 50px !important;
+
+    .slick-btn{
+        position: absolute;
+        top: -50px;
+        right: 0;
+
+        &.slick-prev{
+            right: 40px;
+        }
+
+        &.slick-next{
+            right: 0;
+        }
+
+        svg{
+            width: 30px;
+        }
+
+        @media (max-width: 767px) {
+            top: unset;
+            bottom: -25px;
+        }
+    }
+}
+
+.slick-slider-production{
+    .group-production--list-item{
+        padding: 0 15px;
+        min-width: unset
+    }
+}
+
 
 @media (max-width: 767px) {
     .hidden-767 {
@@ -4500,6 +4536,12 @@ button {
 
     .show-767 {
         display: block;
+    }
+
+    .slick-slider-production{
+        .group-production--list-item{
+            padding: 0 5px;
+        }
     }
 
     .blog-slide-news {
