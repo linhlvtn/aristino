@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 454,
+            "activePatchIndex": 477,
             "patches": [
                 {
                     "date": 1694396058858,
@@ -1824,6 +1824,98 @@
                 {
                     "date": 1695365994619,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4309,9 +4309,9 @@\n         h3{\r\n             font-size: 18px;\r\n         }\r\n         form {\r\n-            padding: 1rem 0;\r\n+            padding: 0rem 0;\r\n         }\r\n     }\r\n \r\n     [type=\"radio\"]:checked,\r\n"
+                },
+                {
+                    "date": 1695875622680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1436,13 +1436,14 @@\n             font-size: 14px;\r\n         }\r\n     }\r\n \r\n-    .SibarNavBar_filter__body.body-sibar-login .form-control,\r\n-    .SibarNavBar_filter__body.body-sibar-login button {\r\n+    .SibarNavBar_filter__body.body-sibar-login .form-control{\r\n         border-radius: 3px;\r\n         width: 100%;\r\n-        height: 55px\r\n+        height: 45px;\r\n+        border-radius: 40px;\r\n+        padding: 10px 20px;\r\n     }\r\n \r\n     .SibarNavBar_filter__body.body-sibar-login .btn_group_login {\r\n         display: flex;\r\n@@ -3415,8 +3416,12 @@\n                 object-fit: contain;\r\n             }\r\n         }\r\n     }\r\n+\r\n+    .content-payment{\r\n+        \r\n+    }\r\n }\r\n \r\n .tracking-detail {\r\n     padding: 30px 0;\r\n@@ -4491,9 +4496,44 @@\n         }\r\n     }\r\n }\r\n \r\n+.slick-list-prd{\r\n+    position: relative;\r\n+    margin-bottom: 50px !important;\r\n \r\n+    .slick-btn{\r\n+        position: absolute;\r\n+        top: -50px;\r\n+        right: 0;\r\n+\r\n+        &.slick-prev{\r\n+            right: 40px;\r\n+        }\r\n+\r\n+        &.slick-next{\r\n+            right: 0;\r\n+        }\r\n+\r\n+        svg{\r\n+            width: 30px;\r\n+        }\r\n+\r\n+        @media (max-width: 767px) {\r\n+            top: unset;\r\n+            bottom: -25px;\r\n+        }\r\n+    }\r\n+}\r\n+\r\n+.slick-slider-production{\r\n+    .group-production--list-item{\r\n+        padding: 0 15px;\r\n+        min-width: unset\r\n+    }\r\n+}\r\n+\r\n+\r\n @media (max-width: 767px) {\r\n     .hidden-767 {\r\n         display: none;\r\n     }\r\n@@ -4501,8 +4541,14 @@\n     .show-767 {\r\n         display: block;\r\n     }\r\n \r\n+    .slick-slider-production{\r\n+        .group-production--list-item{\r\n+            padding: 0 5px;\r\n+        }\r\n+    }\r\n+\r\n     .blog-slide-news {\r\n         height: 100vh;\r\n \r\n         img {\r\n"
+                },
+                {
+                    "date": 1695875804276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3418,9 +3418,9 @@\n         }\r\n     }\r\n \r\n     .content-payment{\r\n-        \r\n+        padding: 20px 0;\r\n     }\r\n }\r\n \r\n .tracking-detail {\r\n"
+                },
+                {
+                    "date": 1695875891109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3419,8 +3419,16 @@\n     }\r\n \r\n     .content-payment{\r\n         padding: 20px 0;\r\n+\r\n+        .list_bank ul {\r\n+            list-style: none;\r\n+            padding: 0;\r\n+            margin: 0;\r\n+            display: flex;\r\n+            flex-wrap: wrap;\r\n+        }\r\n     }\r\n }\r\n \r\n .tracking-detail {\r\n"
+                },
+                {
+                    "date": 1695875897623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3420,9 +3420,9 @@\n \r\n     .content-payment{\r\n         padding: 20px 0;\r\n \r\n-        .list_bank ul {\r\n+        .list-vnpay {\r\n             list-style: none;\r\n             padding: 0;\r\n             margin: 0;\r\n             display: flex;\r\n"
+                },
+                {
+                    "date": 1695875914258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3426,8 +3426,18 @@\n             padding: 0;\r\n             margin: 0;\r\n             display: flex;\r\n             flex-wrap: wrap;\r\n+\r\n+            li {\r\n+                flex: 0 0 25%;\r\n+                padding: 5px;\r\n+                text-align: center;\r\n+                display: inline-flex;\r\n+                justify-content: center;\r\n+                align-items: center;\r\n+                min-height: 60px;\r\n+            }\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695875931681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3435,8 +3435,28 @@\n                 display: inline-flex;\r\n                 justify-content: center;\r\n                 align-items: center;\r\n                 min-height: 60px;\r\n+\r\n+                label {\r\n+                    color: #434a54;\r\n+                    font-weight: 500;\r\n+                    padding: 5px;\r\n+                    height: 4.5em;\r\n+                    border: 1px solid #dcdcdf;\r\n+                    -webkit-border-radius: 5px;\r\n+                    border-radius: 5px;\r\n+                    line-height: 4.5em;\r\n+                    display: block;\r\n+                    position: relative;\r\n+                    margin-bottom: 0;\r\n+                    -webkit-transition: all .15s ease;\r\n+                    -o-transition: all .15s ease;\r\n+                    transition: all .15s ease;\r\n+                    text-align: center;\r\n+                    -webkit-box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n+                    box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1695876314612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3454,8 +3454,23 @@\n                     transition: all .15s ease;\r\n                     text-align: center;\r\n                     -webkit-box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n                     box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n+                \r\n+                \r\n+                    input {\r\n+                        border: none;\r\n+                        background: url(images/trans.png);\r\n+                        color: #fff;\r\n+                        position: absolute;\r\n+                        width: 100%;\r\n+                        height: 100%;\r\n+                        top: 0;\r\n+                        font-size: 0;\r\n+                        z-index: 2;\r\n+                        left: 0;\r\n+                        outline: 0 !important;\r\n+                    }\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1695876341951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3470,8 +3470,14 @@\n                         left: 0;\r\n                         outline: 0 !important;\r\n                     }\r\n                 }\r\n+\r\n+                img {\r\n+                    max-width: 100%;\r\n+                    height: auto;\r\n+                    text-align: center;\r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1695876359991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3452,10 +3452,10 @@\n                     -webkit-transition: all .15s ease;\r\n                     -o-transition: all .15s ease;\r\n                     transition: all .15s ease;\r\n                     text-align: center;\r\n-                    -webkit-box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n-                    box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n+                    // -webkit-box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n+                    // box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n                 \r\n                 \r\n                     input {\r\n                         border: none;\r\n"
+                },
+                {
+                    "date": 1695877093681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3472,11 +3472,11 @@\n                     }\r\n                 }\r\n \r\n                 img {\r\n-                    max-width: 100%;\r\n-                    height: auto;\r\n                     text-align: center;\r\n+                    aspect-ratio: 16/9;\r\n+                    object-fit: contain;\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1695877219386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3452,8 +3452,11 @@\n                     -webkit-transition: all .15s ease;\r\n                     -o-transition: all .15s ease;\r\n                     transition: all .15s ease;\r\n                     text-align: center;\r\n+                    display: inline-flex;\r\n+                    align-items: center;\r\n+                    justify-content: center;\r\n                     // -webkit-box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n                     // box-shadow: 1px 2px 3px 0 rgb(0 0 0 / 8%);\r\n                 \r\n                 \r\n"
+                },
+                {
+                    "date": 1695885249888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3472,8 +3472,12 @@\n                         z-index: 2;\r\n                         left: 0;\r\n                         outline: 0 !important;\r\n                     }\r\n+\r\n+                    &.active{\r\n+                        border-color: #2188c9;\r\n+                    }\r\n                 }\r\n \r\n                 img {\r\n                     text-align: center;\r\n"
+                },
+                {
+                    "date": 1695885261059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3461,9 +3461,9 @@\n                 \r\n                 \r\n                     input {\r\n                         border: none;\r\n-                        background: url(images/trans.png);\r\n+                        background: transparent;\r\n                         color: #fff;\r\n                         position: absolute;\r\n                         width: 100%;\r\n                         height: 100%;\r\n"
+                },
+                {
+                    "date": 1695885492812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3428,9 +3428,9 @@\n             display: flex;\r\n             flex-wrap: wrap;\r\n \r\n             li {\r\n-                flex: 0 0 25%;\r\n+                flex: 0 0 20%;\r\n                 padding: 5px;\r\n                 text-align: center;\r\n                 display: inline-flex;\r\n                 justify-content: center;\r\n"
+                },
+                {
+                    "date": 1695896151859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3385,8 +3385,12 @@\n     }\r\n }\r\n \r\n \r\n+.content-payment-banking{\r\n+    padding: 20px 0;\r\n+}\r\n+\r\n .checkout-payments {\r\n     border-top: 1px solid #EAEAEA;\r\n     padding: 30px 0 0;\r\n \r\n@@ -3417,9 +3421,9 @@\n             }\r\n         }\r\n     }\r\n \r\n-    .content-payment{\r\n+    .content-payment-vnpay{\r\n         padding: 20px 0;\r\n \r\n         .list-vnpay {\r\n             list-style: none;\r\n"
+                },
+                {
+                    "date": 1695896164694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3384,13 +3384,8 @@\n         padding: 0 0 20px;\r\n     }\r\n }\r\n \r\n-\r\n-.content-payment-banking{\r\n-    padding: 20px 0;\r\n-}\r\n-\r\n .checkout-payments {\r\n     border-top: 1px solid #EAEAEA;\r\n     padding: 30px 0 0;\r\n \r\n"
+                },
+                {
+                    "date": 1695896243836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3485,8 +3485,17 @@\n                 }\r\n             }\r\n         }\r\n     }\r\n+\r\n+    .content-payment-banking{\r\n+        padding: 20px 0;\r\n+\r\n+        .listBankATM{\r\n+            list-style: none;\r\n+            padding: 0;\r\n+        }\r\n+    }\r\n }\r\n \r\n .tracking-detail {\r\n     padding: 30px 0;\r\n"
+                },
+                {
+                    "date": 1695896256830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3492,8 +3492,12 @@\n \r\n         .listBankATM{\r\n             list-style: none;\r\n             padding: 0;\r\n+\r\n+            li{\r\n+                margin-bottom: 30px;\r\n+            }\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695896276102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3495,8 +3495,13 @@\n             padding: 0;\r\n \r\n             li{\r\n                 margin-bottom: 30px;\r\n+                font-size: 14px;\r\n+\r\n+                .img-bank{\r\n+                    max-width: 100px;\r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1695896297588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3499,8 +3499,9 @@\n                 font-size: 14px;\r\n \r\n                 .img-bank{\r\n                     max-width: 100px;\r\n+                    margin-bottom: 15px;\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1695896318183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3501,8 +3501,12 @@\n                 .img-bank{\r\n                     max-width: 100px;\r\n                     margin-bottom: 15px;\r\n                 }\r\n+\r\n+                p{\r\n+                    font-size: 14px;\r\n+                }\r\n             }\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1695896336166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3504,8 +3504,9 @@\n                 }\r\n \r\n                 p{\r\n                     font-size: 14px;\r\n+                    margin-bottom: 10px;\r\n                 }\r\n             }\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1695896375387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3492,8 +3492,9 @@\n \r\n         .listBankATM{\r\n             list-style: none;\r\n             padding: 0;\r\n+            margin: 15px 0;\r\n \r\n             li{\r\n                 margin-bottom: 30px;\r\n                 font-size: 14px;\r\n"
                 }
             ],
             "date": 1694396058858,

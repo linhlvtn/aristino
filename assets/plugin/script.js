@@ -493,3 +493,13 @@ function checkWindowSize() {
     checkWindowSize();
     $(window).resize(checkWindowSize);
   });
+
+
+
+  
+  $('.list-vnpay li input').click(function () {
+    $('#BankCode').val($(this).val());
+
+    $('.list-vnpay li label').removeClass('active');
+    $(this).parent().addClass('active');
+})
