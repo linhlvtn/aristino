@@ -252,7 +252,7 @@ button {
         height: 800px;
         background-size: contain;
         top: 0%;
-        opacity: 1;
+        opacity: 0.03;
         z-index: -1;
         background-repeat: no-repeat;
         background-position: right;
@@ -899,9 +899,9 @@ button {
 
     &::before {
         content: "";
-        background-image: url('/assets/images/icon-footer-background.svg');
-        width: 900px;
-        height: 330px;
+        background-image: url('/assets/images/icon-footer-background.png');
+        width: 880px;
+        height: 340px;
         position: absolute;
         background-size: cover;
         margin: auto;
@@ -910,6 +910,7 @@ button {
         right: 0;
         bottom: 0;
         text-align: center;
+        opacity: 0.28;
     }
 
     .heading-footer {
@@ -974,7 +975,7 @@ button {
 
         &::before {
             content: "";
-            background: #272324;
+            background: #1d1a1b;
             background-image: url('/assets/images/icon-small-footer.svg');
             width: 60px;
             height: 20px;

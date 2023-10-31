@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 501,
+            "activePatchIndex": 504,
             "patches": [
                 {
                     "date": 1694396058858,
@@ -2012,6 +2012,18 @@
                 {
                     "date": 1695978435883,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4708,9 +4708,9 @@\n         align-items: center;\r\n         justify-content: center;\r\n         gap: 15px;\r\n         position: absolute;\r\n-        top: -205px;\r\n+        top: -215px;\r\n         right: 0;\r\n         padding: 20px 0;\r\n         visibility: hidden;\r\n         opacity: 0;\r\n"
+                },
+                {
+                    "date": 1698736086052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -898,9 +898,9 @@\n     }\r\n \r\n     &::before {\r\n         content: \"\";\r\n-        background-image: url('/assets/images/icon-footer-background.svg');\r\n+        background-image: url('/assets/images/icon-footer-background.png');\r\n         width: 900px;\r\n         height: 330px;\r\n         position: absolute;\r\n         background-size: cover;\r\n"
+                },
+                {
+                    "date": 1698736342320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -251,9 +251,9 @@\n         right: 0;\r\n         height: 800px;\r\n         background-size: contain;\r\n         top: 0%;\r\n-        opacity: 1;\r\n+        opacity: 0.03;\r\n         z-index: -1;\r\n         background-repeat: no-repeat;\r\n         background-position: right;\r\n     }\r\n"
+                },
+                {
+                    "date": 1698736511113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -899,18 +899,19 @@\n \r\n     &::before {\r\n         content: \"\";\r\n         background-image: url('/assets/images/icon-footer-background.png');\r\n-        width: 900px;\r\n-        height: 330px;\r\n+        width: 880px;\r\n+        height: 340px;\r\n         position: absolute;\r\n         background-size: cover;\r\n         margin: auto;\r\n         background-repeat: no-repeat;\r\n         left: 0;\r\n         right: 0;\r\n         bottom: 0;\r\n         text-align: center;\r\n+        opacity: 0.28;\r\n     }\r\n \r\n     .heading-footer {\r\n         text-align: center;\r\n@@ -973,9 +974,9 @@\n         position: relative;\r\n \r\n         &::before {\r\n             content: \"\";\r\n-            background: #272324;\r\n+            background: #1d1a1b;\r\n             background-image: url('/assets/images/icon-small-footer.svg');\r\n             width: 60px;\r\n             height: 20px;\r\n             position: absolute;\r\n"
                 }
             ],
             "date": 1694396058858,
